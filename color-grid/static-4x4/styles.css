@@ -1,0 +1,64 @@
+
+body {
+
+	margin: 0px;
+	font-size: 0px;
+}
+
+div {
+	display: inline-block;
+	margin: 0px;
+	height:25vh;
+    width: 25vw;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 0px;
+
+}
+
+.first_Box {
+    background-color: black;
+}
+.second_Box {
+    background-color: yellow;
+}
+.third_Box {
+    background-color: red;
+}
+.fourth_Box {
+    background-color: green;
+}
+.fifth_Box {
+	background-color: purple;
+}
+.sixth_Box {
+	background-color: blue;
+}
+.seventh_Box {
+	background-color: purple;
+}
+.eighth_Box {
+	background-color: yellow;
+}
+.ninth_Box {
+	background-color: red;
+}
+.tenth_Box {
+	background-color: yellow;
+}
+
+.twelvth_Box {
+	background-color: blue;
+}
+.thirteenth_Box{
+	background-color: blue;
+}
+.fourteenth_Box{
+	background-color: green;
+}
+.fifteenth_Box{
+	background-color: black;
+}
+.sixteenth_Box{
+	background-color: purple;
+}
