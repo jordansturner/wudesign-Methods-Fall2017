@@ -1,0 +1,99 @@
+body {
+
+	margin: 0px;
+	font-size: 0px;
+}
+
+div {
+	display: inline-block;
+	margin: 0px;
+	height:25vh;
+    width: 25vw;
+    padding: 0px;
+    font-size: 0px;
+  	
+}
+
+.c2 { transition: all .2s ease-in-out; }
+.c2:hover { transform: scale(1.1); }
+
+.c1:hover { 
+	background-color: #FF792D;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	transition: all .2s ease-in-out;
+
+}
+
+.c3 {
+	 -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.c3:hover {
+	
+}
+
+.first_Box {
+    background-color: #FF782D;
+    
+}
+.second_Box {
+    background-color: #E8764F;
+}
+.third_Box {
+    background-color: #FF593A;
+}
+.fourth_Box {
+    background-color: #FF2D49;
+   
+}
+.fifth_Box {
+	background-color: #FF2D49;
+
+}
+.sixth_Box {
+	background-color: #FF593A;
+}
+.seventh_Box {
+	background-color: #E8764F;
+}
+.eighth_Box {
+	background-color: #FF782D;
+
+}
+.ninth_Box {
+	background-color: #FF782D;
+
+}
+.tenth_Box {
+	background-color: #E8764F;
+}
+
+.eleventh_Box {
+	background-color: #FF593A;
+}
+
+.twelvth_Box {
+	background-color: #FF2D49;
+
+}
+.thirteenth_Box{
+	background-color: #FF2D49;
+
+}
+.fourteenth_Box{
+	background-color: #FF593A;
+}
+.fifteenth_Box{
+	background-color: #E8764F;
+}
+.sixteenth_Box{
+	background-color: #FF782D;
+
+}
