@@ -1,0 +1,1117 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+
+}
+.active_Events {
+	display: block;
+	height: 50%;
+	margin: 80px;
+
+
+}
+.abutton {
+	display: inline-flex;
+	align-items: center;
+	text-align: center;
+	height: 25%;
+	width: 25%;
+	margin: 20px;
+	position: relative;
+	background-color: grey;
+	outline: none;
+
+
+}
+
+.shrink:active {
+	position: relative;
+    height: 5%;
+    width: 5%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+.cchange:active {
+	background-color: red;
+	transition: 2s;
+	outline: none;
+}
+
+.wchange:active {
+
+}
+
+#hide {
+	display: inline-block;
+	height: 25%;
+	width: 25%;
+	margin: 20px;
+	position: relative;
+	padding-top: 50px;
+	background-color: grey;
+	text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+	text-align: center;
+	font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 30px;
+    line-height: normal;
+    font-family: system-ui;
+    word-spacing: 0px;
+
+}
+
+#hide-checkbox {
+	display: none;
+	text-align: center;
+}
+
+#hide-checkbox:checked + #hide:after {
+	content: "Where did I go?";
+	text-align: center;
+    padding-top: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: grey;
+}
+
+.grow:active {
+ 	position: relative;
+    height: 50%;
+    width: 50%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+.slide:active {
+	position: relative;
+	transition: .7s ease-in-out;
+	opacity: 0;
+    width: 0px;
+    background: blue;
+    text-transform: opacity;
+    outline: none;
+    
+   
+}
+
+.spin:active {
+	margin: 20px;
+     
+    background: #f00;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-transition: rotate(3600deg);
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.inset:active {
+	box-shadow: inset 0 0 0 5px #3071A9;
+	transition: all 0.4s ease-in-out;
+	outline: none;
+}
+
+.bbutton {
+	display: inline-block;
+	height: 25%;
+	width: 25%;
+}
+
+.swap{display:table;width:100%;border-spacing:0 25px}
+.bbutton{margin:0 0 25px;display:table-row;}
+.swap1{background:red;}
+.swap2{
+  height:150px;
+  background:blue;
+}
+
+@media screen and (max-width:992px){
+	.div1{display:table-footer-group}
+}
+
+
+#jump2 {
+ position: relative;
+
+}
+
+#jump2:active {
+ transform-origin: 50% 50%;
+  animation: jump2 .5s linear alternate infinite;
+}
+
+@keyframes jump {
+  0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+  40%  {transform: translate3d(0,-30%,0) scale3d(.7,1.5,1);}
+  100% {transform: translate3d(0,-100%,0) scale3d(1.5,.7,1);}
+}
+
+@keyframes jump2 {
+  0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+  40%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+  100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
+}
+
+
+#jump:active {
+    position: relative;
+    transform-origin: 100% 100%;
+    animation: jump .2s linear alternate infinite;
+}
+
+#buttonmiddle {
+    background-color: blue;
+    outline:none;
+    height: 25px;
+    width: 25px;
+}
+
+.Second_Round {
+	display: block;
+	margin: 1em;
+    position: relative;
+    height: 500px;
+    width: 500px;
+
+}
+
+.box2 {
+  display: block;  
+  background: lightblue;
+  margin-bottom: 1em;
+}
+
+.pic {
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+
+}
+
+.top:active {
+    opacity: 0;
+}
+
+
+.hopping_wrapper {
+display:block;
+margin:0 auto;
+position:relative;
+top:auto;
+right:10px;
+width:57px;
+height:75px;
+outline:#fff;
+font-size:0px;
+}
+
+.tickle {
+    background-color: white;
+    height:100px: 
+    width: 100px;
+    border-radius: 50%;
+}
+
+.rabbitspin:active {
+
+animation: spin 1s infinite;
+transition: 0.4s;
+}
+
+.third_Round {
+    margin: 20px;
+
+}
+.scew {
+    height: 50px;
+    width: 50px;
+}
+
+.delete {
+    background-color: red;
+    height: 16px;
+    width: 10px;
+    border-radius: 30%;
+}
+
+.alert {
+    background-color: blue;
+    height: 16px;
+    width: 10px;
+    border-radius: 30%;
+}
+
+.dblclick {
+    background-color: green;
+    color: white;
+    border-radius: 40%;
+}
+
+.default_morph {
+    width: 15px; 
+    height: 307px; 
+    background-color: rgb(185, 234, 87);
+}
+
+.morph {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#offsetrandom {
+    background-color: blue;
+    border-radius: 30%;
+    color: white;
+}
+
+#offsetrandomcolor {
+    background-color: blue;
+    border-radius: 30%;
+    color: white;
+}
+
+#audio_Button {
+    background-color: orange;
+    border-radius: 30%;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    position: relative;
+
+
+}
+
+@keyframes dance {
+  0% {
+    bottom: 0px;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
+#danceMusic {
+    position: relative;
+    animation: dance ease .15s alternate infinite;
+    display: none;
+
+
+}
+#danceMusic2 {
+    position: relative;
+    animation: dance  .45s alternate infinite;
+    display: none;
+
+
+}
+#danceMusic3 {
+    position: relative;
+    animation: dance  .05s alternate infinite;
+    display: none;
+    animation-delay: 11.3s;
+
+
+}
+
+.button-3d {
+ position:relative;
+ width: auto;
+ color:green;
+ text-decoration:none;
+ border-radius:5px;
+ border:solid 1px lightgreen;
+ background:lightgreen;
+ text-align:center;
+ padding:16px 18px 14px;
+ outline: none;
+ 
+ -webkit-transition: all 0.1s;
+ -moz-transition: all 0.1s;
+ transition: all 0.1s;
+ 
+ -webkit-box-shadow: 0px 6px 0px green;
+ -moz-box-shadow: 0px 6px 0px green;
+ box-shadow: 0px 6px 0px green;
+}
+
+.button-3d:active{
+ -webkit-box-shadow: 0px 2px 0px green;
+ -moz-box-shadow: 0px 2px 0px green;
+ box-shadow: 0px 2px 0px green;
+ position:relative;
+ top:4px;
+ outline: none;
+}
+
+.gah {
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: all 2s;
+    width: 200px;
+    height: 200px;
+    outline: none;
+    }
+    .gah:active {
+      background-color: green;
+      border-radius: 1000px; 
+}
+
+.gah2 {
+    background-color: gold;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+    @keyframes raisetheroof{
+      from {position: relative; bottom: 0px;}
+      to {position: relative; bottom: 150px;}
+    }
+.gah2:active {
+      animation-name: raisetheroof;
+      animation-duration: .5s;
+      position: relative;
+      outline: none;
+      opacity: .4;
+}
+
+
+.gah3 {
+    background-color: gold;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+.gah3scew {
+    -webkit-animation: scewed 2s ease-in-out 1s  normal infinite;
+}
+    @-webkit-keyframes scewed{
+     0% {-webkit-transform: translateZ(-194px) rotateY(0deg);}
+    20% {-webkit-transform: translateZ(-194px) rotateX(-180deg);}
+    40% {-webkit-transform: translateZ(-194px) rotateX(-90deg);}
+    60% {-webkit-transform: translateZ(-194px) rotateX(90deg);}
+    80% {-webkit-transform: translateZ(-488.5px) rotateY(90deg);}
+    90% {-webkit-transform: translateZ(-488.5px) rotateY(-90deg);}
+    100% {-webkit-animation-play-state:paused;}
+    }
+
+.gah4 {
+    background-color: orange;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+.gah4scew {
+    -webkit-animation: scewedd 2s ease-in-out 1s  normal infinite;
+}
+    @-webkit-keyframes scewedd{
+     0% {-webkit-transform: translateZ(-40px) rotateY(0deg);}
+    40% {-webkit-transform: translateZ(30px) rotateX(30deg);}
+    60% {-webkit-transform: translateY(-194px) rotateX(90deg);}
+    80% {-webkit-transform: translateZ(90.5px) rotateY(90deg);}
+    90% {-webkit-transform: translateZ(-488.5px) rotateY(-90deg);}
+    100% {-webkit-animation-play-state:paused;}
+    }
+
+#gah5 {
+    background-color: lightblue;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+.gah5scew {
+    -webkit-animation: sceweddd 2s ease-in-out 1s  normal infinite;
+}
+    @-webkit-keyframes sceweddd{
+     0% {border-radius: 0px;}
+    40% {border-radius: 40px;}
+    60% {border-radius: 100px;}
+    80% {border-radius: 400px;}
+    90% {border-radius: 500px;}
+    100% {-webkit-animation-play-state:paused;}
+    }
+
+ #gah6 {
+    background-color: lightblue;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+.gah6scew {
+    -webkit-animation: scewedddd 4s ease 1s  normal ;
+}
+    @-webkit-keyframes scewedddd{
+     0% {transform: scale(1, 1);}
+    40% {transform: scale(5, 5);}
+    60% {transform: scale(2, 2);}
+    80% {transform: scale(3, 5);}
+    90% {transform: scale(5, 3);}
+    100% {transform: scale(1, 1);}
+    }
+#gah7 {
+    background-color: lightblue;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+.gah7scew {
+    -webkit-animation: sceweddddd 4s ease 1s  normal ;
+}
+    @-webkit-keyframes sceweddddd{
+     0% {transform: skewX(20deg);}
+    40% {transform: skewX(40deg);}
+    60% {transform: skewX(60deg);}
+    80% {transform: skewX(80deg);}
+    90% {transform: skewX(90deg);}
+    100% {transform: skewX(20deg);}
+    }
+
+#gah8 {
+    background-color: lightblue;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+.gah8scew {
+    -webkit-animation: scewedddddd 4s ease 1s  normal ;
+}
+    @-webkit-keyframes scewedddddd{
+     0% {transform: skewY(20deg);}
+    40% {transform: skewY(40deg);}
+    60% {transform: skewY(60deg);}
+    80% {transform: skewY(80deg);}
+    90% {transform: skewY(90deg);}
+    100% {transform: skewY(20deg);}
+    }
+
+
+#gah9 {
+    background-color: lightblue;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+.gah9scew {
+    -webkit-animation: yea 4s ease 1s  normal ;
+}
+    @-webkit-keyframes yea{
+     0% {transform: skew(0deg, 0deg);}
+    40% {transform: skew(20deg, 10deg);}
+    60% {transform: skew(80deg, 90deg);}
+    80% {transform: skew(10deg, 300deg);}
+    90% {transform: skew(80deg, 360deg);}
+    100% {transform: skew(0deg, 0deg);}
+    }
+
+    .gah10 {
+    background-color: violet;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+.gah10scew {
+    -webkit-animation: for 4s ease   normal ;
+}
+    @-webkit-keyframes for{
+     0% {transform: matrix(0, 0, 0, 0, 0, 0);}
+    40% {transform: matrix(1, 20, 10, 5, 30, 6);}
+    60% {transform: matrix(6, 60, 40, 40, 80, 90);}
+    80% {transform: matrix(3, 3, 3, 3, 3, 3);}
+    90% {transform: matrix(45, 76, -30, 32, 0, -40);}
+    100% {transform: matrix(0, 0, 0, 0, 0, 0);}
+    }
+
+    .blownup {
+    background-color: red;
+    cursor: pointer;
+    outline: none;
+    height: 500px;
+    width: 500px;
+    border-radius: 1000px;
+    color: white;
+    font-size: 40px;
+
+    }
+
+    .boom {
+        height: 10px;
+        width: 10px;
+        display: none;
+    }
+
+    .menu {
+        width: 200px;
+        height: 50px;
+    }
+
+    .menuopen {
+        width: 200px;
+        height: 500px;
+    }
+    .lineheight {
+        width: 200px;
+        height: 50px;
+        background-color: silver;
+    }
+
+    .shadow {
+        width: 200px;
+        height: 40px;
+        background-color: violet;
+        color: white;
+    }
+
+    .shadow.onclick {
+        animation-name: shadow;
+        animation-duration: 1s;
+        text-shadow: 10px 10px 2px black;
+    }
+
+    .border {
+    background-color: lightblue;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+    .bordergrow {
+    -webkit-animation: bad 4s ease-in-out 1s  normal ;
+}
+    @-webkit-keyframes bad    {
+     0% {border:10px solid black;}
+    40% {border:20px solid black;}
+    60% {border:30px solid black;}
+    80% {border:40px solid black;}
+    90% {border:30px solid black;}
+    100% {border:20px solid black;}
+    }
+
+    .strobe {
+    background-color: lightblue;
+    cursor: pointer;
+    outline: none;
+    color: red;
+    height: 100px;
+    width: 100px;
+    }
+
+    .strobestart {
+    -webkit-animation: hi .5s ease-in-out  infinite ;
+}
+    @-webkit-keyframes hi{
+     0% {opacity: 1;}
+    40% {opacity: 0;}
+    60% {opacity: 1;}
+    80% {opacity: 0;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+    }
+
+    #color {
+    }
+
+    .colorchange {
+        color: red;
+
+    }
+
+    .border2 {
+    background-color: lightblue;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+    .bordergrow2 {
+    -webkit-animation: sceweddddddddd 4s ease-in-out 1s  normal ;
+}
+    @-webkit-keyframes sceweddddddddd{
+     0% {border:-10px solid black;}
+    40% {border:-20px solid black;}
+    100% {border:20px solid black;}
+    }
+
+    #growright {
+    background-color: lightblue;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    width: 100px;
+    }
+
+    #growright:active {
+    width: 300px;
+    transition: ease;
+    }
+    /* matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */
+
+/* examples:
+
+
+
+
+
+.box75 {
+    background-color: ivory;
+    transition: width 2s, height 2s, transform 2s;
+    }
+    .box75.selected {
+          background-color: ivory;
+          animation-name: box;
+          width: 300px;
+          height: 300px;
+          transform: rotate(180deg);
+    }
+
+.box81 {
+    background-color: ghostwhite;
+    transition-duration: 1s;
+    }
+   
+
+*/
+
+.wrapper {
+	display: block;
+  width:99.6%;
+  margin:0.2%;
+  outline: none;
+  position: relative;
+}
+
+.ripplelink{
+  display:block;
+  float:left;
+  width:49.6%;
+  margin:0.2%;
+  height:10em;
+  line-height:10em;
+  text-align:center;
+  color:#fff;
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  outline: none;
+
+}
+
+.ripplelink:hover{
+	z-index:1;
+  box-shadow:rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+  -webkit-box-shadow:rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+  -moz-box-shadow:rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+  outline: none;
+}
+
+.ink {
+  display: block;
+  position: absolute;
+  background:rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  -webkit-transform:scale(0);
+     -moz-transform:scale(0);
+       -o-transform:scale(0);
+          transform:scale(0);
+          outline: none;
+}
+
+.animate {
+	-webkit-animation:ripple 0.65s linear;
+   -moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+     -o-animation:ripple 0.65s linear;
+        animation:ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}
+
+
+.cyan{
+  background:#00bcd4;
+}
+
+#addnewbutton {
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	outline: none;
+	display: inline-block;
+}
+
+#newbutton {
+	visibility: hidden;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	display: inline-block;
+
+}
+#addnewbutton2 {
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	outline: none;
+	display: inline-block;
+}
+
+#newbutton2 {
+	visibility: hidden;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	display: inline-block;
+
+}
+#box1 {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+}
+
+#box2 {
+	display: inline-block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: pink;
+    cursor: pointer;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+}
+#box3 {
+	display: inline-block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+
+    background-color: pink;
+    cursor: pointer;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+}
+#box11 {
+	display: block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    background-color: pink;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+.mybox {
+    background-color: lightblue;
+    width: 200px;
+    height: 1.1em;
+    text-align: center;
+    border: 2px solid blue;
+    margin: 3px;
+    font-size: 14px;
+  }
+
+
+  .scroll2 {
+  	display: block;
+  	background-color: lightblue;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid blue;
+    margin: 3px;
+    font-size: 14px;
+  }
+
+
+.My_Emotions8 {
+	width: 100px;
+	height: 100px;
+	display: block;
+	background-color: blue;
+}
+  button .mysolution {
+    font-size: 14px;
+  }
+
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+  .box2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+  .box3 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+  }
+   .box4 {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+  }
+  .box5 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+  }
+
+   .box6 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+
+.box7 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+
+.box8 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+.tilt {
+    color: red;
+}
+.tilt2 {
+    color: blue;
+}
+
+.tilt3 {
+    color: blue;
+}
+
+.tilt4 {
+    color: blue;
+}
+.tilt5 {
+    color: black;
+}
+
+.box9 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+.box10 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+  }
+
+  .box111 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+  .box11 {
+    margin: 3px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    top: 30px;
+    background: green;
+    display: none;
+  }
+
+.newcolor {
+    background: blue;
+  }
+
+.box12 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+.box13 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+}
+.box14 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box15 {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box15click {
+
+    cursor: pointer;
+    
+}
+
+.box16 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box17 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box18 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box19 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+
+.box20 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box21 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
