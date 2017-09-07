@@ -922,5 +922,196 @@ transition: 0.4s;
   button .mysolution {
     font-size: 14px;
   }
-  </style>
 
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+  .box2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+  .box3 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+  }
+   .box4 {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+  }
+  .box5 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+  }
+
+   .box6 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+
+.box7 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+
+.box8 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+.tilt {
+    color: red;
+}
+.tilt2 {
+    color: blue;
+}
+
+.tilt3 {
+    color: blue;
+}
+
+.tilt4 {
+    color: blue;
+}
+.tilt5 {
+    color: black;
+}
+
+.box9 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+.box10 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+  }
+
+  .box111 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+  .box11 {
+    margin: 3px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    top: 30px;
+    background: green;
+    display: none;
+  }
+
+.newcolor {
+    background: blue;
+  }
+
+.box12 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+.box13 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+}
+.box14 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box15 {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box15click {
+
+    cursor: pointer;
+    
+}
+
+.box16 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box17 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box18 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box19 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+
+.box20 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}
+.box21 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+}

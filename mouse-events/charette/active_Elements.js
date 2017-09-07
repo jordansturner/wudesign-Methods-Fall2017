@@ -385,7 +385,220 @@ $( "#myVideo" ).click(function() {
   $( "#myVideo" ).get(0).play();
 });
 
+$( ".text" ).click(function() {
+$('.text').fonteo({ direction: 'left' })
 
-				
+});
+
+
+$( ".box" ).click(function() {
+$('.box').transition({x:210}, 500, "linear");
+});
+
+$( ".box2" ).click(function() {
+$('.box2').transition({x:210}, 500, "linear");
+$('.box2').transition({ rotate: '45deg' });
+
+});
+
+$( ".box3" ).click(function() {
+$('.box3').transition({
+  perspective: '100px',
+  rotate3d: '1,1,0,180deg'
+});
+
+});
+
+
+$( ".box4" ).click(function() {
+
+$('.box4').transition({
+  perspective: '100px',
+  rotateX: '180deg'
+});
+
+});
+
+
+$( ".box5" ).click(function() {
+
+$('.box5').transition({
+  perspective: '100px',
+  rotateY: '180deg'
+});
+
+});
+
+$( ".box6" ).click(function() {
+
+$('.box6')
+  .transition({ x: -40 })
+  .transition({ y: 40 })
+  .transition({ x: 0 })
+  .transition({ y: 0 });
+
+});
+
+
+
+$( ".box6" ).click(function() {
+
+$('.box6')
+  .transition({ x: -40 })
+  .transition({ y: 40 })
+  .transition({ x: 0 })
+  .transition({ y: 0 });
+
+});
+
+
+$( ".box7" ).click(function() {
+$('.box7').css({ transform: 'scale(0.2)' });
+
+});
+
+$( ".box8" ).click(function() {
+$('.box8').transition({ scale: 0, delay: 500 });
+
+
+});
+
+
+
+$( ".text2" ).click(function() {
+$('.text2')
+  .transition({ x: 40 })
+  .transition({ y: 0 })
+  .transition({ x: 40 })
+  .transition({ y: 0 });
+
+});
+
+$( ".text3" ).click(function() {
+$('.text3')
+  .transition({ x: 40 })
+  .transition({ y: 0 })
+  .transition({ x: 40 })
+  .transition({ y: 0 });
+  $('.text3').css({ transform: 'scale(0.0)' });
+
+});
+
+$( ".fancy_title" ).click(function() {
+$('.fancy_title').textillate({ in: { effect: 'rollIn' } });
+
+});
+
+
+
+$( ".tilt" ).click(function() {
+$('.tilt').textillate({ 
+  out: { effect: 'foldUnfold', sync: true },
+  loop: true
+});
+});
+
+$( ".tilt2" ).click(function() {
+$('.tilt2').textillate({ 
+  in: { effect: 'fadeInLeftBig', sync: true },
+  loop: true
+});
+});
+$( ".tilt3" ).click(function() {
+$('.tilt3').textillate({ 
+  in: { effect: 'bounceIn', },
+  in: { effect: 'rollOut', },
+  loop: false
+});
+});
+$( ".tilt4" ).click(function() {
+$('.tilt4').textillate({ 
+  in: { effect: 'rotateInDownRight', },
+  loop: false
+});
+});
+$( ".tilt5" ).click(function() {
+$('.tilt5').textillate({ 
+  in: { effect: 'flipoutX', },
+  loop: false
+});
+});
+			
+$( ".box9" ).click(function() {
+$('.box9').addClass('animated wobble');
+
+});	
+
+$( ".box10" ).click(function() {
+$('.box10').addClass('animated rubberBand');
+
+});	
+
+$( ".box111" ).click(function() {
+  $( ".box11" )
+  	.show("slow")
+    .animate({ "left": "+=200" }, 2000 )
+    .queue(function() {
+      $( this ).addClass( "newcolor" ).dequeue();
+    })
+    .animate({ "left": "-=200" }, 500 )
+    .queue(function() {
+      $( this ).removeClass( "newcolor" ).dequeue();
+    })
+    .slideUp();
+});
+
+$( ".box12" ).click(function() {
+$('.box12').addClass( "animated bounceOutRight");
+
+});
+
+$( ".box13" ).click(function() {
+$('.box13').addClass( "animated rotateOutDownRight");
+});
+
+$( ".box14" ).click(function() {
+$('.box14').addClass( "animated rollOut");
+});
+
+$( ".box15click" ).click(function() {
+
+$('.box15').show("slow").addClass( "animated zoomIn");
+});
+
+$( ".box16" ).click(function() {
+
+$('.box16').addClass( "animated jello");
+});
+
+$( ".box17" ).click(function() {
+
+$('.box17').addClass( "animated headShake");
+});
+
+$( ".box18" ).click(function() {
+
+$("HTML, BODY").addClass( "animated headShake");
+});
+
+$( ".box19" ).click(function() {
+
+$("HTML, BODY").addClass( "animated zoomOut");
+});
+
+$( ".box21" ).click(function() {
+
+$("HTML, BODY").addClass( "animated swing");
+});
+
+$( ".box20" ).click(function() {
+
+$("HTML, BODY").addClass( "animated rubberBand");
+});
+
+
+
+
+/*.animate({'margin-top': '-=50px'}, {queue: false})*/
 /*height: "40%"
 borderWidth: "10px"*/
