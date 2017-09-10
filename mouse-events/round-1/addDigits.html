@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text" id="txtn1" name=""> 
+<input type="text" id="txtn2" name=""> 
+<button id="btnadd"> Add me</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+ $('#btnadd').on('click', function () {
+            var n1 = parseInt($('#txtn1').val());
+            var n2 = parseInt($('#txtn2').val());
+            var r = n1 + n2;
+            alert("The Sum = " + r);
+            return false;
+        });
+</script>
+</body>
+</html>

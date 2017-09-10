@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="wrapper">
+		<button type="button" id="buttontop"></button>
+		<button type="button" id="buttonmiddle"></button>
+		<button type="button" id="buttonright"></button>
+</div>
+		
+<style type="text/css">
+	.wrapper {
+		margin-top: 400px;
+		margin-left: 400px;
+	}
+
+	#buttonmiddle {
+		position: relative;
+	}
+	#buttontop {
+		position: relative;
+		display: block;
+	}
+	#buttonright {
+		position: relative;
+	}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script type="text/javascript">
+	
+$("#buttonmiddle").on("click", function(){
+	var marginLeft = $("#buttonright").css('margin-left');
+	var marginBottom = $("#buttontop").css('margin-bottom');
+	console.log(marginLeft);
+	var numLeft = parseInt(marginLeft.substr(0, marginLeft.length-2));
+	var numRight = parseInt(marginBottom.substr(0, marginBottom.length-2));
+	if(numLeft >= 200) {
+		$("#buttonright").animate({'margin-left': '-=50px'});	
+		//$("#buttonleft").animate({'margin-right': '-=50px'});
+
+	} else {
+		$("#buttonright").animate({'margin-left': '+=50px'});
+		//$("#buttonleft").animate({'margin-right': '+=50px'});
+
+	}
+	if(numRight >= 200) {
+		$("#buttontop").animate({'margin-bottom': '-=50px'});	
+		//$("#buttonleft").animate({'margin-right': '-=50px'});
+
+	} else {
+		$("#buttontop").animate({'margin-bottom': '+=50px'});
+		//$("#buttonleft").animate({'margin-right': '+=50px'});
+
+	}
+});
+
+</script>
+</body>
+</html>

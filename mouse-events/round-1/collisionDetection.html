@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<style type="text/css">
+.one {
+  position:absolute;
+  background-color:#abc;
+  left:50px;
+  width:90px;
+  height:90px;
+}
+.two {
+  position:absolute;
+  background-color:red;
+  left:250px;
+  width:40px;
+  height:40px;
+}
+
+
+</style>
+
+    <div class="block one"></div>
+    <div class="block two"></div>
+
+    <div class="result"> The result is</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+function handle_mousedown(e){
+    window.my_dragging = {};
+    my_dragging.pageX0 = e.pageX;
+    my_dragging.pageY0 = e.pageY;
+    my_dragging.elem = this;
+    my_dragging.offset0 = $(this).offset();
+    function handle_dragging(e){
+        var left = my_dragging.offset0.left + (e.pageX - my_dragging.pageX0);
+        var top = my_dragging.offset0.top + (e.pageY - my_dragging.pageY0);
+        $(my_dragging.elem)
+        .offset({top: top, left: left});
+    }
+    function handle_mouseup(e){
+        $('.one')
+        .off('mousemove', handle_dragging)
+        .off('mouseup', handle_mouseup);
+    }
+    $('.one')
+    .on('mouseup', handle_mouseup)
+    .on('mousemove', handle_dragging);
+}
+$('.one').mousedown(handle_mousedown);
+
+function redraw( event, ui ) {
+  $(this).html(
+    'x : '+$(this).offset().left+'<br>'+
+    'y : '+$(this).offset().top+'<br>'+
+    'height: '+$(this).outerHeight()+'<br>'+
+    'width : '+$(this).outerWidth())
+    .data('coordinates',{
+      x: $(this).offset().left,
+      y: $(this).offset().top,
+      height: $(this).outerHeight(),
+      width: $(this).outerWidth()
+    });
+  var a = $('.one').data('coordinates');
+  var b = $('.two').data('coordinates');
+  if(!(a && b)){
+    return false;
+  }
+  $('.result').text('!' + !isCollide(a, b));
+}
+function isCollide(a, b) {
+    return !(
+        ((a.y + a.height) < (b.y)) ||
+        (a.y > (b.y + b.height)) ||
+        ((a.x + a.width) < b.x) ||
+        (a.x > (b.x + b.width))
+    );
+}
+/*$(function (){
+  $('.block').draggable({
+    drag: redraw
+  }).each(function(){
+    console.log(this,'!');
+    redraw.call(this);
+  });
+});*/
+
+</script>
+</body>
+</html>

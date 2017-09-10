@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<style type="text/css">
+
+body {
+    position: relative;
+}
+
+.image-wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.image-wrapper.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+    var fadeDelay = 1000;
+    var fadeDuration = 1000;
+    $(document).click(function(e){
+        var num = Math.floor((Math.random()*10)+1);
+        var div = $('<div class="image-wrapper">')
+            .css({
+                "left": e.pageX + 'px',
+                "top": e.pageY + 'px',
+            })
+        
+            .append($('<img src="images/image' + num + '.jpg" alt="myimage" />'))
+            .appendTo(document.body);
+                
+        setTimeout(function() {
+            div.addClass('fade-out');           
+            setTimeout(function() { div.remove(); }, fadeDuration);
+        }, fadeDelay);
+    });
+});
+
+	
+</script>
+</body>
+</html>

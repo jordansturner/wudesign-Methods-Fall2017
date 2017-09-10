@@ -1,0 +1,40 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "Add Digits Together",
+      "file" : "addDigits.html"
+    },
+    {
+      "name" : "Drag a Box",
+      "file" : "boxDraggable.html"
+    },
+    {
+      "name" : "Test For Moving gameObjects With Canvas",
+      "file" : "createGame.html"
+    },
+    {
+      "name" : "Element Jumps On Click",
+      "file" : "elementJumpOnClick.html"
+    }
+    {
+      "name" : "Generate Random Images On Click",
+      "file" : "GenerateDivsOnClick.html"
+    },
+    {
+      "name" : "Track Mouse Positions",
+      "file" : "logMousePosition.html"
+    },
+    {
+      "name" : "Test For a Piano",
+      "file" : "multipleSoundsPlay.html"
+    },
+    {
+      "name" : "Chase Ball Game",
+      "file" : "teleportBallAroundScreen.html"
+    }
+     {
+      "name" : "Animate Two Objects On Click",
+      "file" : "twoDivsAnimateAway.html"
+    }
+  ]
+}

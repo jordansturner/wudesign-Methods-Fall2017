@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button id="target" type="button">Add to your score</button>
+<div id="output">0</div>
+
+
+
+
+
+<style type="text/css">
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$('#target').click(function() {
+    $('#output').html(function(i, val) { return val*1+1 });
+});
+	
+</script>
+</body>
+</html>

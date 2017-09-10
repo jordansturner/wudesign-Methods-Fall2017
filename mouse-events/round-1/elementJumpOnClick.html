@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+
+<div class="bouncingBall">
+	
+</div>
+<style type="text/css">
+	.bouncingBall {
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		background-color: lightblue;
+		margin-top: 400px;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+$(".bouncingBall").click(function() {
+   $('.bouncingBall').effect("bounce", {distance:200}, 900); 
+});
+
+</script>
+
+</body>
+</html>

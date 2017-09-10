@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<audio id="sound1" preload="auto">
+    <source src="music/sound1.mp3"></source>
+</audio>
+<audio id="sound2" preload="auto">
+    <source src="music/sound2.mp3"></source>
+</audio>
+<audio id="sound3" preload="auto">
+    <source src="music/sound3.mp3"></source>
+</audio>
+<audio id="sound4" preload="auto">
+    <source src="music/sound4.mp3"></source>
+</audio>
+<div id="sound1" >short</div>
+<div id="sound2" >longer</div>
+<div id="sound3" >annoying alert</div>
+<div id="sound4" >dont press me</div>
+
+
+
+
+
+<style type="text/css">
+
+#sound1 {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	text-align: center;
+	font-style: 0px;
+	color: white;
+}
+
+#sound2 {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	text-align: center;
+	outline-offset:0px;
+	color: white;
+}
+
+#sound3 {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	color: black;
+	text-align: center;
+	outline-offset:0px;
+}
+#sound4 {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	color: white;
+	text-align: center;
+	outline-offset:0px;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+var audio1 = $("#sound1")[0];
+    console.log(audio1);
+var audio2 = $("#sound2")[0];
+console.log(audio2);
+var audio3 = $("#sound3")[0];
+console.log(audio3);
+var audio4 = $("#sound4")[0];
+console.log(audio4);
+
+$("div#sound1").click(function() {
+    audio1.play();
+});
+
+$("div#sound2").click(function() {
+    audio2.play();
+});
+$("div#sound3").click(function() {
+    audio3.play();
+});
+$("div#sound4").click(function() {
+    audio4.play();
+});
+
+</script>
+
+</body>
+</html>

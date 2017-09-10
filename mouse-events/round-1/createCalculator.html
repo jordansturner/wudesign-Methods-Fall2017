@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+	</head>
+	<body>
+	<style type="text/css">
+		body, div, a {
+    padding:0;
+    margin:0;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#calculator {
+	background-color: #999;
+	width: 310px;
+	height: 460px;
+	border: 3px black solid;
+	margin: 10px auto;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+#total {
+    height: 70px;
+    width: 300px;
+    margin:auto;
+    background-color:white;
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 60px;
+    padding: 0 5px;
+}
+
+#numbers, #operators {
+	margin: auto;	
+}
+
+#operators a {
+	display: block;
+	width: 45px;
+	height: 45px;
+	float: left;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	font-size: 39px;
+	padding: 2px;
+	margin: 5px 6px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+	border-radius: 10px;
+}
+
+#numbers a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	float: left;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	font-size: 32pt;
+	padding: 10px;
+	margin: 5px 15px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+	border-radius: 10px;
+}
+
+a:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(#EDEDED));
+    background: -moz-linear-gradient(top,  #DCDCDC,  #EDEDED);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DCDCDC', endColorstr='#EDEDED');
+}
+	</style>
+		<div id="calculator">
+			<div id="total">
+			</div>
+			<div id="operators">
+				<a>+</a>
+				<a>-</a>
+				<a>/</a>
+				<a>*</a>
+				<a>=</a>
+			</div>
+			<div id="numbers">
+				<a>1</a>
+				<a>2</a>
+				<a>3</a>
+				<a>4</a>
+				<a>5</a>
+				<a>6</a>
+				<a>7</a>
+				<a>8</a>
+				<a>9</a>
+				<a id="clear">C</a>
+				<a>0</a>
+				<a id="clearall">AC</a>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="jquery-ui.min.js"></script>
+		<script type="text/javascript">
+	var round = function(text, pos) {
+    function setCharAt(str,index,chr) {
+       if(index > str.length-1) return str;
+        return str.substr(0,index) + chr + str.substr(index+1);
+    }
+    if (text.length > pos) {
+        for (i=1;i<text.length;i++){
+            if (text[i] === ".") {
+                i = text.length;
+                if (parseFloat(text[pos],10) >= 5) {
+                    text = (setCharAt(text,pos-1,((parseFloat(text[pos-1],10))+1).toString(10))).substr(0,pos);
+                } else {
+                    text = text.substr(0,pos);
+                }
+            } 
+        }
+    }
+    return text;
+};
+var $ = jQuery.noConflict();
+$(function() {
+    var testNumLength = function(number) {
+        if (number.length > 9) {
+            totaldiv.text(number.substr(number.length-9,9));
+            if (number.length > 15) {
+                number = "";
+                totaldiv.text("Err");
+            }
+        } 
+    };
+    var number = "";
+    var newnumber = "";
+    var operator = "";
+    var totaldiv = $("#total");
+    totaldiv.text("0");
+    $("#numbers > a").not("#clear,#clearall").click(function(){
+		number += $(this).text();
+		totaldiv.text(number);
+		testNumLength(number);
+    });
+    $("#operators > a").not("#equals").click(function(){
+		operator = $(this).text();
+		newnumber = number;
+		number = "";
+		totaldiv.text("0");
+    });
+    $("#clear,#clearall").click(function(){
+		number = "";
+		totaldiv.text("0");
+		if ($(this).attr("id") === "clearall") {
+			newnumber = "";
+		}
+    });
+    $("#equals").click(function(){
+		if (operator === "+"){
+			number = (parseInt(number, 10) + parseInt(newnumber,10)).toString(10);
+		} else if (operator === "-"){
+			number = (parseInt(newnumber, 10) - parseInt(number,10)).toString(10);
+		} else if (operator === "/"){
+			number = (parseInt(newnumber, 10) / parseInt(number,10)).toString(10);
+		} else if (operator === "*"){
+			number = (parseInt(newnumber, 10) * parseInt(number,10)).toString(10);
+		}
+		totaldiv.text(number);
+		testNumLength(number);
+		number = "";
+		newnumber = "";
+    });
+	$(document).keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode === 49) {
+            $("#one").click();
+       } else if (keycode === 50) {
+            $("#two").click();
+        } else if (keycode === 51) {
+            $("#three").click();
+        } else if (keycode === 52) {
+            $("#four").click();
+        } else if (keycode === 53) {
+            $("#five").click();
+        } else if (keycode === 54) {
+            $("#six").click();
+        } else if (keycode === 55) {
+            $("#seven").click();
+        } else if (keycode === 56) {
+            $("#eight").click();
+        } else if (keycode === 57) {
+            $("#nine").click();
+        } else if (keycode === 48) {
+            $("#zero").click();
+        } else if (keycode === 97) {
+            $("#clearall").click();
+        } else if (keycode === 99) {
+            $("#clear").click();
+        } else if (keycode === 61) {
+            $("#equals").click();
+        } else if (keycode === 43) {
+            $("#plus").click();
+        } else if (keycode === 45) {
+            $("#minus").click();
+        } else if (keycode === 42 || keycode === 120) {
+            $("#times").click();
+        } else if (keycode === 47) {
+            $("#divide").click();
+        }
+    });
+}); 
+
+		</script>
+	</body>
+</html>
