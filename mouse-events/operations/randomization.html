@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="wrapper">
+	<div id = "firstbox"></div>
+</div>
+<style type="text/css">
+
+
+	.wrapper {
+		display: inline-block;
+		height: 100%;
+		width: 100%
+	}
+	#firstbox {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		display: inline-block;
+		margin: 10px;
+	}
+
+	.manipulation {
+		border-radius: 100%;
+	}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+	$("#firstbox").on("click", function(){
+		$("<div>", {id:"firstbox"}).appendTo(".wrapper").css({"border-radius": "100%"})
+
+		console.log("helloworld");
+
+
+	
+});
+
+
+
+	$("#firstbox").click(function(){
+		$("#firstbox")
+    .css({ "border-radius": "100%" })
+    .css({ "background-color": "green" })
+
+
+  var x = Math.floor((Math.random()*200)+3);
+  $('#firstbox').width(x+'px');
+  $('#firstbox').height(x+'px');
+
+
+});
+
+	
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="wrapper"></div>
+<style type="text/css">
+
+
+	.wrapper {
+		display: inline-block;
+		height: 100%;
+		width: 100%
+	}
+	#firstbox {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		display: inline-block;
+		margin: 10px;
+	}
+
+	.manipulation {
+		border-radius: 100%;
+	}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+	$("html").on("click", function(){
+		$("<div>", {id:"firstbox"}).appendTo(".wrapper")
+
+		console.log("helloworld");
+
+
+	/*var random = Math.floor(Math.random()*100);*/
+
+/*for (var i=0; i<random; i=i+1) {
+	function();*/
+});
+
+</script>
+
+
+</body>
+</html>
+
+
