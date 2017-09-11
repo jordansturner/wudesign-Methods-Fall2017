@@ -15,7 +15,7 @@
     {
       "name" : "Element Jumps On Click",
       "file" : "elementJumpOnClick.html"
-    }
+    },
     {
       "name" : "Generate Random Images On Click",
       "file" : "GenerateDivsOnClick.html"
@@ -31,10 +31,14 @@
     {
       "name" : "Chase Ball Game",
       "file" : "teleportBallAroundScreen.html"
-    }
-     {
+    },
+    {
+      "name" : "Do Math",
+      "file" : "onClickAddScore.html"
+    },
+    {
       "name" : "Animate Two Objects On Click",
       "file" : "twoDivsAnimateAway.html"
-    }
+    },
   ]
 }
