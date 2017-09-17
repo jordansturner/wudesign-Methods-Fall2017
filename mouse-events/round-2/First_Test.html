@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		html,
+		body {
+			position: relative;
+			height: 100%;
+			width: 100%;
+
+
+		}
+
+		html {
+			background-color: lightyellow;
+		}
+
+		.image-wrapper {
+			position: absolute;
+
+			opacity: 1;
+		}
+
+		.coloredBlock.fade-out {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+
+		/*.coloredBlock {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			transform: translate(-50%, -50%);
+		}*/
+		.clusterBlock {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			border-radius: 100%;
+			/*transform: translate(-50%, -50%);*/
+		}
+		.clusterBlock > .clusterBlock {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		/*	transform: translateX(100%);*/
+
+
+		}
+
+
+	</style>
+</head>
+<body class="page">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="randomColor.js"></script>
+	<script type="text/javascript">
+
+	// function getColor() {
+	// 	var letter = '123456789ABCDEF';
+	// 	var color = '#';
+	// 	for (var i=0; i<6; i++) {
+	// 		color = color+letter[Math.floor(Math.random()*14)];
+	// 	}
+	// 	return color;
+	// }
+
+	// var color = randomColor();
+	// $(".coloredBlock").css("background-color", randomColor);
+	// // });
+	// }
+	
+
+	$(function(){
+		var fadeDelay = 1000;
+		var fadeDuration = 1000;
+
+		$('.page').click(function(e){
+			// var newDiv = $('<div class="coloredBlock">')
+
+			// .css({
+			// 	"left": e.pageX,
+			// 	"top": e.pageY,
+			// 	"backgroundColor": randomColor({luminosity: 'light', hue: 'pink'})
+			// });
+
+			// $('.page').append(newDiv);
+
+			// $('html').css({
+			// 	"backgroundColor": randomColor({luminosity: 'rich', hue: 'yellow'})
+			// });
+
+
+			// var iterations = Math.floor((Math.random()*10));
+			var randomNum = Math.floor(Math.random()*10);
+			console.log(randomNum);
+			var clusterDiv = $('<div class="clusterContainer">');
+			var parent = null;
+			
+			for (var i = 0; i <= randomNum; i++) {
+				var child = $('<div class="clusterBlock">');
+				var randomDeg = Math.floor(Math.random()*360);
+
+				console.log(parent);
+
+
+				child.css({
+					"backgroundColor": randomColor({luminosity: 'light', hue: 'blue'}),
+					"transform": "translateX(100%) rotate("+randomDeg + "deg)"
+				})
+
+				if (parent === null) {
+					parent = child;
+					clusterDiv.append(parent);
+					parent.css({
+						"left": e.pageX,
+						"top": e.pageY,
+						"transform": "translate(-50%, -50%) rotate("+randomDeg + "deg)"
+					})
+				} else {
+					parent.append(child);
+					child.addClass('new' + i);
+					parent = child;
+					parent.append(child);
+				}
+				//console.log(parent);
+
+			}
+
+			$('.page').append(clusterDiv);
+
+
+			// setTimeout(function() {
+			// 	newDiv.addClass('fade-out');           
+			// 	setTimeout(function() { newDiv.remove(); }, fadeDuration);
+			// }, fadeDelay);
+			
+		});
+        // .appendTo(document.body);
+
+        
+    });
+
+
+</script>
+
+</body>
+</html>

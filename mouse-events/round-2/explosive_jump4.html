@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body class="page">
+
+
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+
+	<style type="text/css">
+
+		html,
+		body {
+			position: relative;
+			height: 100%;
+			width: 100%;
+
+
+		}
+
+		html {
+			background-color: lightyellow;
+		}
+
+		.image-wrapper {
+			position: absolute;
+
+			opacity: 1;
+		}
+
+		.coloredBlock.fade-out {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+
+		.coloredBlock {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			transform: translate(-50%, -50%);
+		}
+		.clusterBlock {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			transform: translate(-50%, -50%);
+		}
+
+		.tab {
+
+		    padding: 10px;
+		    opacity: 0;
+		    background-color: aquamarine;
+		    height: 1px;
+
+		    transition: 1s;
+		}
+
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="randomColor.js"></script>
+	<script type="text/javascript">
+
+	// function getColor() {
+	// 	var letter = '123456789ABCDEF';
+	// 	var color = '#';
+	// 	for (var i=0; i<6; i++) {
+	// 		color = color+letter[Math.floor(Math.random()*14)];
+	// 	}
+	// 	return color;
+	// }
+
+	// var color = randomColor();
+	// $(".coloredBlock").css("background-color", randomColor);
+	// // });
+	// }
+	
+
+	$(function(){
+		var fadeDelay = 1000;
+		var fadeDuration = 1000;
+
+		
+
+		$('.page').click(function(e){
+			var newDiv = $('<div class="coloredBlock">')
+
+			.css({
+				"left": e.pageX,
+				"top": e.pageY,
+				"backgroundColor": randomColor({luminosity: 'light', hue: 'pink'})
+			});
+
+			$('.page').append(newDiv);
+
+			$('html').css({
+				"backgroundColor": randomColor({luminosity: 'rich', hue: 'yellow'})
+			});
+
+
+			// var iterations = Math.floor((Math.random()*10));
+
+			for (var i = 0; i <= 5; i++) {
+				var clusterDiv = $('<div class="clusterBlock">');
+				var num = Math.floor(Math.random()*500);
+				var x = Math.floor((Math.random()*500)+2);
+				var y = Math.floor((Math.random()*300));
+				clusterDiv.css({
+					"left": e.pageX + x,
+					"top": e.pageY + y,
+					"backgroundColor": randomColor({luminosity: 'light', hue: 'blue'})
+				})
+
+				$('.page').append(clusterDiv);
+
+					console.log('e');
+
+			}
+
+
+			setTimeout(function() {
+				newDiv.addClass('fade-out');           
+				setTimeout(function() { newDiv.remove(); }, fadeDuration);
+			}, fadeDelay);
+			
+		});
+        // .appendTo(document.body);
+
+        
+    });
+
+	$( document).on("mouseover", ".clusterBlock", function() {
+		console.log('p');
+		$(".tab").css({
+			"background-color" : randomColor({luminosity: 'light', hue: 'red'}),
+			"opacity" : 1
+
+		});
+		
+		$(".tab").mouseover(function(){
+			var size = Math.floor(20+Math.random()*500);
+			$(this).css("width",size);
+
+		})
+	});
+
+
+	$(".clusterBlock").click(function(){
+				var x = Math.floor((Math.random()*500)+2);
+				var y = Math.floor((Math.random()*300));
+		}).css({
+				"backgroundColor": randomColor({luminosity: 'rich', hue: 'purple'}),
+				"transform": "translate(-x, -y)"
+			});
+
+
+	// $(".coloredBlock").ready(function() {
+	// 	var color = randomColor();
+	// 	$(".coloredBlock").css("background-color", randomColor);
+	// });
+
+
+
+</script>
+
+</body>
+</html>

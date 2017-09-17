@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body class="page">
+	<style type="text/css">
+
+		html,
+		body {
+			position: relative;
+			height: 100%;
+			width: 100%;
+
+		}
+
+		.image-wrapper {
+			position: absolute;
+			
+			opacity: 1;
+		}
+
+		.image-wrapper.fade-out {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+
+		.coloredBlock {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="randomColor.js"></script>
+	<script type="text/javascript">
+
+		function getColor() {
+		// 	var letter = '123456789ABCDEF';
+		// 	var color = '#';
+		// 	for (var i=0; i<6; i++) {
+		// 		color = color+letter[Math.floor(Math.random()*14)];
+		// 	}
+		// 	return color;
+		// }
+
+		var color = randomColor();
+		$(".coloredBlock").css("background-color", randomColor);
+		// });
+		}
+
+
+
+
+		$(function(){
+			var fadeDelay = 1000;
+			var fadeDuration = 1000;
+			$('.page').click(function(e){
+				var newDiv = $('<div class="coloredBlock">')
+				.css({
+					"left": e.pageX + 'px',
+					"top": e.pageY + 'px',
+					"backgroundColor": getColor()
+				})
+
+			$('.page').append(newDiv);
+			/*setTimeout(function() {
+            newDiv.addClass('fade-out');           
+            setTimeout(function() { div.remove(); }, fadeDuration);
+            }, fadeDelay);*/
+			})
+            // .appendTo(document.body);
+
+            
+        });
+
+
+
+		// $(".coloredBlock").ready(function() {
+		// 	var color = randomColor();
+		// 	$(".coloredBlock").css("background-color", randomColor);
+		// });
+
+
+
+	</script>
+
+</body>
+</html>
