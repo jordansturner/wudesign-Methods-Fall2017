@@ -1,7 +1,7 @@
 {
   "entrypoints" : [
     {
-      "name" : "First Test",
+      "name" : "test_1.html",
       "file" : "test_1.html"
     },
     {
