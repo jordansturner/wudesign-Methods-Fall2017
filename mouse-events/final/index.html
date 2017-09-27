@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<style type="text/css">
+		input {
+			/*width: 700px;
+			height: 200px;*/
+/*			border-radius: 50%;*/
+	/*		background-color: #FFFFE0;*/
+			position: absolute;
+			top: 72%;
+		    left: 50%;
+		    margin-right: -50%;
+		    transform: translate(-50%, -50%);
+			outline: none;
+			color: #424d53;
+			font-size: 35px;
+		    font-family: 'Pacifico', cursive;
+		    z-index: 2;
+		    border: none;
+		    background-color: transparent;
+		    cursor: pointer;
+		    animation: bouncetwo ease-out 3.5s infinite;
+
+
+		}
+
+		img {
+			position: absolute;
+			top: 50%;
+		    left: 50%;
+		    margin-right: -50%;
+		    transform: translate(-50%, -50%);
+		    z-index: 1;
+		    animation: bounce ease-out 3.5s infinite;
+		}
+
+		body{
+			background-color: #7cd8e2;
+		}
+
+		.circle {
+			width: 10px;
+			height: 10px;
+			position: relative;
+			background-color: red;
+			border-radius: 100%;
+			display: inline-block;
+			z-index: 1;
+		}
+
+		div.a {
+		width: 10px;
+		height:10px;
+		
+		position:fixed;
+		border-radius: 100%;
+		z-index: 1;
+
+		}
+
+		@keyframes bounce {
+			0% {top: 50%;}
+			50% {top: 52%;}
+			100% {top: 50%;}
+		}
+		@keyframes bouncetwo {
+			0% {top: 72%;}
+			50% {top: 74%;}
+			100% {top: 72%;}
+		}
+/*		.clusterBlock {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: red;
+			border-radius: 100%;
+			/*transform: translate(-50%, -50%);*/
+	/*	}
+		.clusterBlock > .clusterBlock {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: red;
+			transform: scale(8, 9);
+			  transition: 1s;
+			  border-radius: 100%
+
+
+
+		}*/
+		.clusterCircle.fade-out {
+			opacity: 1;
+			transition: opacity 4s ease-in-out;
+		}
+		.image-wrapper {
+			position: absolute;
+			opacity: 1;
+		}
+
+		.clusterCircle {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: #FFFFE0;
+			opacity: .5;
+			border-radius: 100%;
+
+		}
+		.clusterCircle > .clusterCircle {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: #FFFFE0;
+			opacity: .5;
+			border-radius: 100%;
+
+
+		}
+
+
+
+	</style>
+</head>
+<body class="page">
+	<!-- <img src="woodlandfloat4.png" alt="Forest" style="width: 500px"> -->
+
+	<a href="test_1.html">
+  		<img src="woodlandfloat4.png" alt="Forest" width="500" />
+	</a>
+	<!-- <form><input type="img" onclick="location.href='test_1.html';" src="woodlandfloat4.png" /></form> -->
+	<form><input type="button" onclick="location.href='test_1.html';" value="Into The Wood Pile" /></form>
+	<div class='a'></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="randomColor.js"></script>
+	<script src="transit.js"></script>
+	<script type="text/javascript">
+		
+
+
+		$(document).ready(function(){
+    	animateDiv();
+    
+		});
+
+		function makeNewPosition(){
+		    
+		    // Get viewport dimensions (remove the dimension of the div)
+		    var h = $(window).height() - 50;
+		    var w = $(window).width() - 50;
+		    
+		    var nh = Math.floor(Math.random() * h);
+		    var nw = Math.floor(Math.random() * w);
+		    
+		    return [nh,nw];    
+		    
+			}
+
+		function animateDiv(){
+		    var newq = makeNewPosition();
+		    var oldq = $('.a').offset();
+		    var speed = calcSpeed([oldq.top, oldq.left], newq);
+		    
+		    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
+		      animateDiv();        
+		    });
+		    
+			};
+
+		function calcSpeed(prev, next) {
+		    
+		    var x = Math.abs(prev[1] - next[1]);
+		    var y = Math.abs(prev[0] - next[0]);
+		    
+		    var greatest = x > y ? x : y;
+		    
+		    var speedModifier = .15;
+
+		    var speed = Math.ceil(greatest/speedModifier);
+
+		    return speed;
+
+			}
+
+		setInterval(function(){ generateDiv(); }, 20);
+
+		function generateDiv (e){
+			
+			var left_Offset = $(".a").offset().left;
+			console.log(left_Offset);
+			var top_Offset = $(".a").offset().top;
+			console.log(top_Offset);
+
+			if ($('.clusterContainer2').length > 50){
+				$('.clusterContainer2').first().remove();
+			}
+		var fadeDelay = 2000;
+		var fadeDuration = 1000;
+		
+			var randomNum = Math.floor(Math.random()*40);
+
+			var clusterDiv = $('<div class="clusterContainer2">');
+			var parent = null;
+			
+			for (var i = 0; i <= randomNum; i++) {
+				var child = $('<div class="clusterCircle">');
+				var randomDeg = Math.ceil(Math.random()*4)*90;
+
+
+
+				child.css({
+					"backgroundColor": randomColor({luminosity: 'light', hue: 'purple'}),
+					"transform": "translateX(100%) rotate("+randomDeg + "deg)"
+				})
+
+
+				if (parent === null) {
+					parent = child;
+					clusterDiv.append(parent);
+					parent.css({
+						"left": left_Offset + "px",
+						"top": top_Offset + "px",
+						"transform": "translate("+randomDeg+"%, -"+randomNum+"%) rotate("+randomDeg + "deg)"
+
+
+					})
+					
+				} 
+				else {
+					parent.append(child);
+					child.addClass('new' + i);
+					parent = child;
+					parent.append(child);
+					parent.transition({ x: 10, y: 10 }, 500, 'ease');
+				}
+
+
+
+			$('.page').append(clusterDiv);
+		}
+	}
+
+
+
+	</script>
+	
+</body>
+</html>
