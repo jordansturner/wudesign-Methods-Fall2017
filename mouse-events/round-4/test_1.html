@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+	<style type="text/css">
+
+		html,
+		body {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+
+
+		}
+
+		html {
+			background-color: 	#FFFFE0;
+			background-image: url(background.png);
+			opacity: 20%;
+		}
+
+		/*.bordercircleright {
+			border-radius: 100%;
+			width: 10px;
+			height: 10px;
+			position: relative;
+			background-color: red;
+
+		}
+		.bordercircletop {
+			border-radius: 100%;
+			width: 10px;
+			height: 10px;
+			position: relative;
+			background-color: red;
+			/*left: 98%;*/
+
+		}
+*/
+	    .clusterCircle.fade-out {
+			opacity: .3;
+			transition: opacity 4s ease-in-out;
+		}
+		.image-wrapper {
+			position: absolute;
+			opacity: 1;
+		}
+
+
+		/*.coloredBlock {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			transform: translate(-50%, -50%);
+		}*/
+		.clusterBlock {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: red;
+			border-radius: 100%;
+			/*transform: translate(-50%, -50%);*/
+		}
+		.clusterBlock > .clusterBlock {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: red;
+			transform: scale(8, 9);
+			  transition: 1s;
+			  border-radius: 100%
+
+
+
+		}
+		.clusterCircle {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: red;
+			opacity: .7;
+			border-radius: 100%;
+
+			/*transform: translate(-50%, -50%);*/
+		}
+		.clusterCircle > .clusterCircle {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: red;
+			opacity: .7;
+			border-radius: 100%;
+
+
+		}
+
+		p {
+		  	margin: 0;
+		  	color: #f46666;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    margin-right: -50%;
+		    transform: translate(-50%, -50%);
+		    font-size: 50px;
+		    font-family: 'Pacifico', cursive;
+/*		    font-weight: bold;*/
+		    cursor: default;
+		    opacity: 0;
+		    z-index: 1;
+		     }
+
+
+		@keyframes opacityChange {
+			0% {opacity: 0;}
+			30% {opacity: 1;}
+			50% {opacity: 1;}
+			70% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+
+
+		#verse1 {
+
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 4s;
+		}
+
+		#verse2 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 12s;
+		}
+
+		#verse3 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 20s;
+		
+		}
+
+		#verse4 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 28s;
+		}
+		#verse5 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 36s;
+		}
+		#verse6 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 44s;
+		}
+		#verse7 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 52s;
+		}
+		#verse8 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 60s;
+		}
+		#verse9 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 68s;
+		}
+		#verse10 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 76s;
+		}
+		#verse11 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 84s;
+		}
+		#verse12 {
+			animation: opacityChange ease-in-out 8s 1 normal forwards;
+			animation-delay: 92s;
+		}
+
+
+
+	</style>
+</head>
+<body class="page">
+	<div class="bordercircleright"></div>
+	<div class="bordercircletop"></div>
+	<p id="verse1">Out walking in the frozen swamp one gray day, </p>
+	<p id="verse2">I paused and said, 'I will turn back from here. </p>
+	<p id="verse3">No, I will go on farther—and we shall see.' </p>
+	<p id="verse4">The hard snow held me, save where now and then </p>
+	<p id="verse5">One foot went through. The view was all in lines </p>
+	<p id="verse6">Straight up and down of tall slim trees </p>
+	<p id="verse7">Too much alike to mark or name a place by </p>
+	<p id="verse8">So as to say for certain I was here </p>
+	<p id="verse9">Or somewhere else: I was just far from home. </p>
+	<p id="verse10">A small bird flew before me. He was careful </p>
+	<p id="verse11">To put a tree between us when he lighted, </p>
+	<p id="verse12">And say no word to tell me who he was </p>
+	<!-- <p id="verse13">Who was so foolish as to think what he thought. </p>
+	<p id="verse14">He thought that I was after him for a feather— </p>
+	<p id="verse15">The white one in his tail; like one who takes </p>
+	<p id="verse16">Everything said as personal to himself. </p>
+	<p id="verse17">One flight out sideways would have undeceived him. </p>
+	<p id="verse18">And then there was a pile of wood for which </p>
+	<p id="verse19">I forgot him and let his little fear </p>
+	<p id="verse20">Carry him off the way I might have gone, </p>
+	<p id="verse21">Without so much as wishing him good-night. </p>
+	<p id="verse22">He went behind it to make his last stand. </p>
+	<p id="verse23">It was a cord of maple, cut and split </p>
+	<p id="verse24">And piled—and measured, four by four by eight. </p>
+	<p id="verse25">And not another like it could I see. </p>
+	<p id="verse26">No runner tracks in this year's snow looped near it. </p>
+	<p id="verse27">And it was older sure than this year's cutting, </p>
+	<p id="verse28">Or even last year's or the year's before. </p>
+	<p id="verse29">The wood was gray and the bark warping off it </p>
+	<p id="verse30">And the pile somewhat sunken. Clematis </p>
+	<p id="verse31">Had wound strings round and round it like a bundle. </p>
+	<p id="verse32">What held it though on one side was a tree </p>
+	<p id="verse33">Still growing, and on one a stake and prop, </p>
+	<p id="verse34">These latter about to fall. I thought that only </p>
+	<p id="verse35">Someone who lived in turning to fresh tasks </p>
+	<p id="verse36">Could so forget his handiwork on which </p>
+	<p id="verse37">He spent himself, the labor of his ax, </p>
+	<p id="verse38">And leave it there far from a useful fireplace </p>
+	<p id="verse39">To warm the frozen swamp as best it could </p>
+	<p id="verse40">With the slow smokeless burning of decay.</p> -->
+
+	<audio id="my_audio" src="music/middle_Dawn.mp3" loop="loop"></audio>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="randomColor.js"></script>
+	<script src="transit.js"></script>
+	<script type="text/javascript">
+
+	// function getColor() {
+	// 	var letter = '123456789ABCDEF';
+	// 	var color = '#';
+	// 	for (var i=0; i<6; i++) {
+	// 		color = color+letter[Math.floor(Math.random()*14)];
+	// 	}
+	// 	return color;
+	// }
+
+	// var color = randomColor();
+	// $(".coloredBlock").css("background-color", randomColor);
+	// // });
+	// }
+window.onload = function() {
+    document.getElementById("my_audio").play();
+}
+	
+	// $(document).ready(function() {
+	// 	loop();
+	// });
+	// function loop(){
+	// 	width = "+=" + $(document).width();
+	//     $(".bordercircleright").animate({
+	//     top: width
+	//   }, 5000, function() {
+	//   	$(this).css({'top':'0'});
+	//   	loop();
+	//   });
+	//     $(".bordercircletop").animate({
+	//     left: width
+	//   }, 5000, function() {
+	//   	$(this).css({'left':'0'});
+	//   	loop();
+	//   });
+	// }
+	  
+
+	$(function(){
+
+
+
+		$('.page').mousemove(function(e){
+
+			// $('html').css({
+			// 	"backgroundColor": randomColor({luminosity: 'light'}), 
+			// });
+			// $('p').css({
+			// 	"color": randomColor({luminosity: 'light'}), 
+			// });
+
+
+			// var iterations = Math.floor((Math.random()*10));
+
+
+			if ($('.clusterContainer').length > 60){
+				$('.clusterContainer').first().remove();
+			}
+			var randomNum = Math.floor(Math.random()*9);
+
+			var clusterDiv = $('<div class="clusterContainer">');
+			var parent = null;
+			var fadeDelay = 2000;
+			var fadeDuration = 1000;
+			
+			for (var i = 0; i <= randomNum; i++) {
+				var child = $('<div class="clusterBlock">');
+				var randomDeg = Math.ceil(Math.random()*4)*90;
+
+
+
+				child.css({
+					"backgroundColor": randomColor({luminosity: 'light', hue: 'blue'}),
+					"transform": "rotate("+randomDeg + "deg) translateX(100%)"
+				})
+
+				if (parent === null) {
+					parent = child;
+					clusterDiv.append(parent);
+					parent.css({
+						"left": e.pageX,
+						"top": e.pageY,
+						"transform": "translate(-50%, -50%) rotate("+randomDeg + "deg)"
+					})
+
+				$(this).addClass('fade-out');           
+				setTimeout(function() { $(this).remove(); }, fadeDuration);
+
+				} 
+				else {
+					parent.append(child);
+					child.addClass('new' + i);
+					parent = child;
+					parent.append(child);
+				}
+
+
+			}
+
+			$('.page').append(clusterDiv);
+
+		});
+
+		$('.page').click(function(e){
+			mX = e.pageX;
+        	mY = e.pageY;
+
+        	$(".clusterBlock").each(function(){
+        	var clusterBlock = this;
+            var distance = calculateDistance ($(this), mX, mY);
+            var randomdist = -400+Math.ceil(Math.random()*800);
+            var randomdist2 = -400+Math.ceil(Math.random()*800);
+
+            if (distance < 150) {
+            	$(this).css({
+            		"opacity": 0,
+            		"transitionDuration": '1s',
+					"transform": 'translate('+randomdist+'px,'+randomdist2+'px)',
+					
+
+
+
+            	})
+            	
+
+            	setTimeout(function() {
+  				$(clusterBlock).remove();
+				}, 1000);
+
+            }
+
+        })
+
+		})
+
+		var mX, mY,
+        $distance = $('#distance span'),
+        $element  = $('.clusterBlock');
+
+    function calculateDistance(elem, mouseX, mouseY) {
+        return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
+    }
+
+
+
+    $(document).mousemove(function(e) {
+
+        mX = e.pageX;
+        mY = e.pageY;
+        $(".clusterBlock").each(function(){
+            var distance = calculateDistance ($(this), mX, mY);
+      
+    //            var box=$(this);
+				// var boxCenter=[box.offset().left+box.width()/2, box.offset().top+box.height()/2];
+
+				// $('.page').mousemove(function(e){    
+				    
+				        
+				// 	var angle = Math.atan2(e.pageX- boxCenter[0],- (e.pageY- boxCenter[1]) )*(180/Math.PI);	    
+				    
+				//     box.css({ "transform": 'rotate3d(.03,.03,0,' + angle + 'deg)'});    
+				    
+				// });
+
+
+            if (distance > 550) {
+            	$(this).remove();
+
+            }
+            else{
+
+            }
+            if (distance > 350){
+                $(this).css("opacity", .4 /*/ distance*/);
+             	// $(this).remove();
+   //              setTimeout(function() {
+            }
+
+       
+            else {
+                $(this).css("opacity", 1);
+            }  
+
+        });
+ 
+         $(".clusterBlock").each(function(){
+            var distance = calculateDistance ($(this), mX, mY);
+                
+
+            if (distance < 80){
+                $(this).css({
+						"height": 18+'px',
+						"width": 18+'px',
+					});
+
+
+            }
+
+       
+            else {
+                $(this).css({
+						"height": 10+'px',
+						"width": 10+'px',
+					});
+            }  
+
+        });
+
+ 
+			
+		});
+
+
+
+
+
+        // .appendTo(document.body); 
+$('.page').mousemove(function(e){
+
+		if ($('.clusterContainer2').length > 50){
+				$('.clusterContainer2').first().remove();
+			}
+		var fadeDelay = 2000;
+		var fadeDuration = 1000;
+		
+			var randomNum = Math.floor(Math.random()*40);
+
+			var clusterDiv = $('<div class="clusterContainer2">');
+			var parent = null;
+			
+			for (var i = 0; i <= randomNum; i++) {
+				var child = $('<div class="clusterCircle">');
+				var randomDeg = Math.ceil(Math.random()*4)*90;
+
+
+
+				child.css({
+					"backgroundColor": randomColor({luminosity: 'light', hue: 'red'}),
+					"transform": "translateX(100%) rotate("+randomDeg + "deg)"
+				})
+
+				if (parent === null) {
+					parent = child;
+					clusterDiv.append(parent);
+					parent.css({
+						"left": e.pageX,
+						"top": e.pageY,
+						"transform": "translate(-50%, -50%) rotate("+randomDeg + "deg)"
+
+
+					})
+					
+				} else {
+					parent.append(child);
+					child.addClass('new' + i);
+					parent = child;
+					parent.append(child);
+					parent.transition({ x: 10, y: 10 }, 500, 'ease');
+				}
+
+
+			}
+
+			$(".clusterCircle").each(function(){
+            var distance = calculateDistance ($(this), mX, mY);
+
+            if (distance > 350){
+                $(this).css("opacity", .3 /*/ distance*/);
+             	// $(this).remove();
+   //              setTimeout(function() {
+            }
+
+       
+            else {
+                $(this).css("opacity", .7 /*/ distance*/);
+            }  
+
+
+            if (distance > 650) {
+            	$(this).remove();
+
+            }
+            else{
+
+            }  
+
+        });
+
+			$('.page').append(clusterDiv);
+
+	
+		});
+
+
+});
+</script>
+
+</body>
+</html>
