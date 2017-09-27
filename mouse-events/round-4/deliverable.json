@@ -1,48 +1,12 @@
 {
   "entrypoints" : [
     {
-      "name" : "test_1.html",
+      "name" : "Introduction",
+      "file" : "introPage.html"
+    },
+    {
+      "name" : "Poetry Slam",
       "file" : "test_1.html"
-    },
-    {
-      "name" : "Second Test",
-      "file" : "test_2.html"
-    },
-    {
-      "name" : "Third Test",
-      "file" : "test_3.html"
-    },
-    {
-      "name" : "Fourth Test",
-      "file" : "test_4.html"
-    },
-    {
-      "name" : "Fifth Test",
-      "file" : "test_5.html"
-    },
-    {
-      "name" : "Sixth Test",
-      "file" : "test_6.html"
-    },
-    {
-      "name" : "Seventh Test",
-      "file" : "test_7.html"
-    },
-    {
-      "name" : "Eighth Test",
-      "file" : "test_8.html"
-    },
-    {
-      "name" : "Ninth Test",
-      "file" : "test_9.html"
-    },
-    {
-      "name" : "Tenth Test",
-      "file" : "test_10.html"
-    },
-    {
-      "name" : "eleventh Test",
-      "file" : "test_11.html"
     }
   ]
 }
