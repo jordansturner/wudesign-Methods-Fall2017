@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+
+<body>
+
+<style type="text/css">
+
+html, body {
+	margin: 0%;
+	padding: 0%;
+    width: 100%;
+    height: 10000px;
+}
+
+
+
+
+.hsContainer {
+    display: inline-block;
+    table-layout: fixed;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 1;
+    z-index: 52;
+}
+.hsContent {
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ffffff;
+    padding: 0 8%;
+    text-align: center
+    z-index: 52;
+}
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 51;
+}
+
+#slide-1 {
+	height: 1000px;
+	width: 100%;
+    z-index: 51;
+}
+
+/* Slide 1 */
+#slide-1 .bcg {background-image:url('background_copy.png')}
+
+#slide-2 .bcg {
+    background: none;
+    background-color: #010101;
+    height: 310px;
+    text-align: center
+    z-index: 51;
+}
+
+    .bar {
+        width: 10%;
+        height: 70px;
+        position: relative;
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+        z-index: 51;
+    }
+     .option5 {
+        width: 100%;
+        height: 70px;
+        position: relative;
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+        background-color: red;
+        z-index: 51;
+    }
+       .option6 {
+        width: 100%;
+        height: 70px;
+        position: relative;
+        display: inline-block;
+        padding: 0px;
+        margin: auto;
+        background-color: pink;
+        position: center;
+        z-index: 51;
+    }
+
+    #progressbar {
+    height:2%;
+    background:#444;
+    bottom:0;
+    z-index:200;
+    position:fixed;
+
+}
+
+.movingGif {
+    background-color: blue;
+    position: relative;
+    margin: auto;
+    color: white;
+    padding: 0px;
+    display: block;
+    width: 50px;
+    z-index: 55
+}
+
+.option7 {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        display: inline-block;
+        padding: 0px;
+        margin: auto;
+        background-color: purple;
+        z-index: 51;
+    }
+.option8 {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        display: inline-block;
+        padding: 0px;
+        margin: auto;
+        background-color: yellow;
+        z-index: 51;
+    }
+    .option9 {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        background-color: red;
+        z-index: 51;
+    }
+    .option10 {
+        width: 50%;
+        height: 500px;
+        position: relative;
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        background-color: purple;
+        z-index: 51;
+        opacity: .7;
+    }
+      .option11 {
+        width: 50%;
+        height: 500px;
+        position: absolute;
+/*        display: block;*/
+        padding: 0px;
+        margin: auto;
+        background-color: purple;
+        z-index: 51;
+        border-radius: 90%;
+    }
+    .option12 {
+        width: 0px;
+        height: 500px;
+        position: absolute;
+/*        display: block;*/
+        padding: 0px;
+        margin: auto;
+        background-color: red;
+        z-index: 50;
+    }
+        .option13 {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        left: 200px;
+        top: 2800px;
+        padding: 0px;
+        margin: auto;
+        background-color: red;
+        border-radius: 100%;
+        z-index: 50;
+    }
+
+    .content {
+  position:fixed;
+  left:50%;
+  margin-left:-250px;
+  top:50px;
+  width:500px;
+}
+
+.intro {
+  width:100%;
+  text-align:center;
+  font-size:40px;
+  margin:0px 0 20px;
+}
+
+.text {
+  font-size:22px;
+  padding-left:2%;
+  height:30px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+}
+
+#bitcoin {
+  width:30px;
+}
+
+.credit {
+  margin-top:14px;
+  font-size:14px;
+  font-style:italic;
+}
+
+.arrow {
+  text-align:center;
+  margin-top:80px;
+  font-size:46px;
+  backface-visiblilty:hidden;
+
+}
+
+.option19 {
+    background:#09f;
+    padding:1em;
+    position:absolute;
+    border: 1px solid red;
+    z-index: 1;
+
+}
+.option20 {
+    background:#09f;
+    padding:2em;
+    position:absolute;
+    border: 1px solid yellow;
+    border-radius: 100%;
+    z-index: 1;
+}
+.option21 {
+    background:#09f;
+    padding:1.5em;
+    position:absolute;
+    border: 1px solid red;
+    border-radius: 100%;
+    z-index: 1;
+
+}
+.option22 {
+    background:#09f;
+    padding:2.5em;
+    position:absolute;
+    border: 1px solid yellow;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.background {
+    background: #09f;
+    position: fixed;
+    width: 100%;
+    height: 1000px;
+    opacity: .5;
+    right: 0%;
+
+    z-index: 0;
+}
+.option24 {
+    background: yellow;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 500px;
+    opacity: 1;
+    top: 900px;
+}
+</style>
+
+<section id="slide-1" class="homeSlide">
+    <div class="bcg"
+        data-center="background-position: 50% 0px;"
+        data-top-bottom="background-position: 50% -100px;"
+        data-anchor-target="#slide-1"
+    >
+        <div class="hsContainer">
+            <div class="hsContent"
+                data-center="opacity: 1"
+                data-top="opacity: 0"
+                data-anchor-target="#slide-1 h2"
+            >
+                <h2>Fade out elements before <br>they leave viewport</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="slide-2">
+    <div class="bcg"
+        data-0="background-color:rgb(1,27,59);"
+        data-top="background-color:(0,0,0);"
+        data-anchor-target="#slide-2"
+    >
+        <div class="hsContainer">
+            <div class="hsContent">
+                <h2
+                    data-bottom="opacity: 0"
+                    data-center="opacity: 1"
+                    data-206-top="opacity: 1"
+                    data-top="opacity: 0"
+                    data-anchor-target="#slide-2 h2"
+                >
+                    Fade me in and out
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bar" 
+data-bottom-bottom="border-radius: 3px;background-color:rgb(250, 128, 114);width:0%;" data-center-center="background-color:rgb(240, 138, 104);width:100%;" 
+data--70-top="background-color:rgb(255, 160, 122);width:0%;"
+>
+    
+</div>
+<div class="option5" 
+data-bottom-bottom="transform:rotate(0deg);" data-center-center="transform:rotate(180deg);" 
+data--70-top="transform:rotate(360deg);"
+>
+    
+</div>
+<div class="option6" 
+data-bottom-bottom="transform:rotate(0deg); width: 100%;" data-center-center="transform:rotate(0deg); width: 0%;" 
+data--70-top="transform:rotate(360deg); width: 100%;"
+>
+    
+</div>
+
+<div class="movingGif" data-bottom-bottom="transform: translate(0px,0px); transform: skewY(0deg);" data-center-bottom="transform: translate(300px, 350px); transform: skewY(60deg);" data-top="transform: translate(0px,-1000px); transform: skewY(0deg);"> hello</div>
+
+
+<div id="progressbar" data-0="width:0%;background:hsl(200, 100%, 50%);" data-end="width:100%;background:hsl(920, 100%, 50%);"></div>
+
+<div class="option7" 
+data-bottom-bottom="transform:rotate(0deg) translateX(0px);"
+data--70-top="transform:rotate(180deg) translateX(700px);"
+>
+    
+</div>
+<div class="option8" 
+data-bottom-bottom="transform:rotate(0deg) translateX(0px); transform-origin: 0px;"
+data--70-top="transform:rotate(180deg) translateX(1400px); transform-origin: 1400px;"
+>
+    
+</div>
+<div class="option9" 
+data-bottom-bottom="transform:rotate(0deg) translateX(0px); transform-origin: 0px;"
+data--70-top="transform:rotate(180deg) translateX(700px); transform-origin: 1400px;"
+>
+    
+</div>
+<div class="option10" 
+data-bottom-bottom="width: 700px; transform: translateX(0px);"
+data--70-top="width: 0px; transform: translateX(-500px);"
+>
+    
+</div>
+
+<div class="option11" 
+data-bottom-top="width: 700px; transform: translateX(0px);"
+data--70-top="width: 0px; transform: translateY(500px);"
+>
+    
+</div>
+<div class="option12" 
+data-bottom-top="width: 0px; transform: translateX(0px) rotate(0deg);"
+data-center="width: 0px; transform: translateX(0px) rotate(720deg); background:hsl(200, 100%, 50%); background:hsl(200, 100%, 50%);"
+data--70-top="width: 600px; transform: translateX(500px) rotate(0deg); background:hsl(600, 100%, 50%);"
+>
+    
+</div>
+
+<div class="option13" 
+data-bottom-top="transform: translate(0px, 0px); background:hsl(200, 100%, 50%);"
+data-70-top="transform: translate(150px, 150px); background:hsl(600, 100%, 50%);"
+data-70-top="transform: translate(150px, 150px); background:hsl(600, 100%, 50%);"
+>
+    
+</div>
+
+<div class="content">
+  <div class="intro"
+       data-0="transform:translateY(65px); opacity: 1;"
+       data-center="transform:translateY(0px); opacity: 1;"
+       data-top="transform:translateY(0px); opacity: 0;">Scroll until you can no longer bear it.</div>
+       
+  <div class="arrow"
+       data-0="opacity:1; display:block; transform:translateY(-10px);"
+       data-400="opacity:0; display:none; transform:translateY(-45px);">▾</div>
+  <p class="text"
+       data-3200="width:0%; opacity:0;"
+       data-3700="width:100%; opacity:1;">
+  Ready for the magic?</p>
+
+<div class="option19"
+    data-3600="opacity:0; top: 0px; transform: rotate(0deg);"
+    data-4000="opacity:1; top: 600px; transform: rotate(3600deg);"
+>
+
+<div class="option20"
+    data-3600="opacity:0; left: 400px; top: 20px;"
+    data-3800="opacity:1; left: 700px; top: 40px;"
+    data-4000="opacity:1; left: -900px; top: 100px;"
+>
+    
+</div>
+
+<div class="option21"
+    data-3600="opacity:0; top: 0px; transform: rotate(0deg); background:hsl(200, 100%, 50%); transform: scale(0, 0);"
+    data-4000="opacity:1; top: 600px; transform: rotate(3600deg); background:hsl(600, 100%, 50%); transform: scale(20, 20);"
+>
+<div class="option22"
+    data-3600="opacity:0; left: 400px; top: 20px;"
+    data-3800="opacity:1; left: 700px; top: 40px;"
+    data-4000="opacity:1; left: 200px; top: 100px;"
+>
+    
+</div>
+</div>
+</div>
+
+<div class="background"
+    data-3600="opacity:0; background:hsl(200, 100%, 50%);"
+    data-3800="opacity:.5; background:hsl(600, 100%, 50%);"
+>
+    
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script type="text/javascript">
+	( function( $ ) {
+    // Init Skrollr
+    var s = skrollr.init({
+        render: function(data) {
+            //Debugging - Log the current scroll position.
+            //console.log(data.curTop);
+        }
+    });
+} )( jQuery );
+
+</script>
+</body>
+</html>
