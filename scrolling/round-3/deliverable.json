@@ -1,0 +1,37 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "First Test",
+      "file" : "index1.html"
+    },
+    {
+      "name" : "Second Test",
+      "file" : "index2.html"
+    },
+    {
+      "name" : "Third Test",
+      "file" : "index3.html"
+    },
+     {
+      "name" : "Fourth Test",
+      "file" : "index4.html"
+    },
+     {
+      "name" : "Fifth Test",
+      "file" : "index5.html"
+    },
+    {
+      "name" : "Sixth Test",
+      "file" : "index6.html"
+    },
+    {
+      "name" : "Seventh Test",
+      "file" : "index7.html"
+    },
+    {
+      "name" : "Eighth Test",
+      "file" : "index8.html"
+    }
+
+  ]
+}

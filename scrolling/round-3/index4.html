@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+<style type="text/css">
+
+	body {
+		height: 18000px;
+		width: 100%;
+		margin: 0px;
+	}
+
+	.wrapper {
+		position: fixed;
+		width: 375px;
+		height: 100%;
+		background-color: beige;
+		margin: 0px;
+		padding:0px;
+		z-index: 1;
+	}
+	#Layer_3 {
+		position: fixed;
+		height: 95%;
+		top: 20px;
+		left: 150px;
+		z-index: 51;
+		margin: 0px;
+		padding:0px;
+	}
+
+	#Layer_4 {
+		position: fixed;
+		height: 95%;
+		top: 20px;
+		left: 150px;
+		margin: 0px;
+		padding:0px;
+		z-index: 52;
+	}
+
+	.wrapper2 {
+		position: fixed;
+		left: 375px;
+		top: 0px;
+		height: 100%;
+		width: 1060px;
+		background-color: black;
+		z-index: 0;
+
+	}
+	.hopper {
+	  position: absolute;
+	  width: 0px;
+	  height: 0px;
+	  z-index: 4;
+	  opacity: 1;
+	  background-color: white;
+	  border-radius: 100%;
+	  top: 93%;
+	  left: 50%;
+	  transform-origin: 50% 400%;
+
+	}
+
+	.landscape {
+		position: absolute;
+		z-index: 1;
+		margin: 0px;
+	}
+
+	.space {
+		position: absolute;
+		z-index: 2;
+		margin: 0px;
+		opacity: 0;
+	}
+	.close {
+		position: absolute;
+		z-index: 3;
+		margin: 0px;
+		opacity: 0;
+	}
+
+	.minutehand {
+		position: absolute;
+		margin: 0px;
+		left: 45%;
+		top: 60%;
+		opacity: 0;
+		height: 400px;
+		width: 20px;
+		z-index: 5;
+		background-color: white;
+		transform-origin: 50% 0%;
+		border-radius: 50%;
+	}
+
+	.hourhand {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 200px;
+		width: 20px;
+		left: 45%;
+		top: 60%;
+		z-index: 5;
+		background-color: white;
+		transform-origin: 50% 0%;
+		border-radius: 50%;
+	}
+
+
+	.firstcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 175px;
+		width: 175px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 40%;
+		top: 45%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+
+	.secondcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 125px;
+		width: 125px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 41.3%;
+		top: 48.4%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+
+
+	.thirdcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 75px;
+		width: 75px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 42.7%;
+		top: 51.8%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+		.fourthcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 225px;
+		width: 225px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 38.7%;
+		top: 41.7%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+	.fifthcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 275px;
+		width: 275px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 37.4%;
+		top: 38.3%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+
+	.blackbackground {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+/*		background-color: black;*/
+		opacity: 0;
+		z-index: 7;
+		background-image: url(SVG/Layer_1.svg);
+		background-size: cover;
+		margin: 0px;
+		padding: 0px;
+
+	}
+
+	.pyramid1 {
+		position: fixed;
+		z-index: 9;
+		display: block;
+		opacity: 0;
+		width: 400px;
+		left: 20%;
+		top: 70%;
+
+
+	}
+
+.pyramid2 {
+		position: fixed;
+		z-index: 8;
+		display: block;
+		opacity: 0;
+		width: 1000px;
+		left: 20%;
+
+
+	}
+
+.pyramid3 {
+		position: fixed;
+		z-index: 9;
+		display: block;
+		opacity: 0;
+		width: 700px;
+		left: 30%;
+
+
+	}
+
+
+	.hopper2 {
+	  position: absolute;
+	  width: 50px;
+	  height: 50px;
+	  z-index: 10;
+	  opacity: 0;
+	  background-color: white;
+	  border-radius: 100%;
+	  top: 93%;
+	  left: 44%;
+	  transform-origin: 50% 400%;
+
+	}
+
+
+</style>
+<div class="wrapper"
+	data-9000=" left: 0px;"
+	data-9350=" left: -525px;"
+
+>
+	<svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 346.13 5703.47"
+	data-9000=" left: 150px;"
+	data-9350=" left: -525px;"
+	><defs><style>.cls-1,.cls-10,.cls-11,.cls-12,.cls-13,.cls-14,.cls-15,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{fill:none;stroke:#4d4d4d;stroke-miterlimit:10;stroke-width:3px;}.cls-2{stroke-dasharray:20.26 20.26;}.cls-3{stroke-dasharray:19.86 19.86;}.cls-4{stroke-dasharray:18.95 18.95;}.cls-5{stroke-dasharray:24 24;}.cls-6{stroke-dasharray:23.81 23.81;}.cls-7{stroke-dasharray:20.26 20.26;}.cls-8{stroke-dasharray:19.9 19.9;}.cls-9{stroke-dasharray:25.1 25.1;}.cls-10{stroke-dasharray:19.97 19.97;}.cls-11{stroke-dasharray:19.86 19.86;}.cls-12{stroke-dasharray:19.72 19.72;}.cls-13{stroke-dasharray:20.23 20.23;}.cls-14{stroke-dasharray:20.6 20.6;}.cls-15{stroke-dasharray:19.21 19.21;}</style></defs><title>Untitled-2</title><line class="cls-1" x1="140.09" y1="5702.5" x2="146.57" y2="5694.89"/><polyline class="cls-2" points="159.7 5679.46 203.09 5628.5 203.09 5555.5 119.09 5461.5 77.09 5398.5 76.72 5345.13"/><polyline class="cls-1" points="76.66 5335 76.59 5325 83.66 5317.93"/><path class="cls-3" d="M6261.61,6536.39l41.89-41.89v-73l-20-53-36-52-7-23,7-41,19-19,13-36v-28l-9-22-14-55,10-37v-45l13-32,14-32,5-60-5-36-32-37-9-27-12-23-6-27-5-37v-32s14-19,14-32,4-32,4-32l14-27,7.56-22.14" transform="translate(-6163.91 -1232.5)"/><polyline class="cls-1" points="108.36 4312.46 111.59 4303 106.69 4294.28"/><polyline class="cls-1" points="93.48 4270.72 88.59 4262 92.23 4252.69"/><polyline class="cls-4" points="99.14 4235.04 106.59 4216 129.59 4152 109.77 4102.1"/><polyline class="cls-1" points="106.28 4093.29 102.59 4084 92.59 4084"/><line class="cls-5" x1="68.59" y1="4084" x2="32.59" y2="4084"/><polyline class="cls-1" points="20.59 4084 10.59 4084 9.6 4074.05"/><line class="cls-6" x1="7.26" y1="4050.35" x2="3.74" y2="4014.8"/><polyline class="cls-1" points="2.57 4002.95 1.59 3993 10.18 3987.89"/><polyline class="cls-7" points="27.61 3977.54 102.59 3933 165.14 3916.22"/><polyline class="cls-1" points="174.93 3913.59 184.59 3911 188.96 3902.01"/><path class="cls-8" d="M6361.58,5116.61l4.92-10.11,9-50,5-73-28-41-64-78s-27-95-27-109,27-83,27-83l41-59v-50l-9-78,14-68,5.47-30.36" transform="translate(-6163.91 -1232.5)"/><polyline class="cls-1" points="177.81 3144.84 179.59 3135 172.51 3127.93"/><line class="cls-9" x1="154.37" y1="3110.69" x2="121.99" y2="3091.5"/><polyline class="cls-1" points="111.19 3085.1 102.59 3080 102.59 3070"/><path class="cls-10" d="M6266.5,4282.53v-61l13-37s33-45,37-59,27-64,27-64l-9-64,5-55v-30" transform="translate(-6163.91 -1232.5)"/><polyline class="cls-1" points="175.59 2670 175.59 2660 166.59 2655.63"/><polyline class="cls-1" points="147.58 2646.38 138.59 2642 138.59 2632"/><polyline class="cls-11" points="139.53 2612.4 170.59 2560 165.59 2514 147.59 2468 147.59 2409 170.59 2354 179.59 2322 179.59 2267 184.59 2217 188.19 2204.19"/><polyline class="cls-1" points="190.88 2194.63 193.59 2185 185.85 2178.66"/><path class="cls-12" d="M6334.52,3398.66l-27-22.16-41-64v-41l7-23s24-27,38-36,37-50,37-50l4-69-9-64-41-32-5.11-25.53" transform="translate(-6163.91 -1232.5)"/><polyline class="cls-1" points="131.55 1729.81 129.59 1720 136.95 1713.23"/><polyline class="cls-13" points="151.85 1699.54 166.59 1686 189.59 1645 230.59 1608 285.59 1562 317.59 1466 339.59 1412 344.59 1325 344.59 1275 330.59 1183 344.59 1101 326.59 1042 266.59 959 199.61 899.38"/><polyline class="cls-1" points="192.06 892.65 184.59 886 184.21 876.01"/><polyline class="cls-14" points="183.42 855.42 180.59 781 172.59 694 138.59 617 106.59 585 84.59 548 61.59 416 88.1 321.54"/><polyline class="cls-1" points="90.88 311.63 93.59 302 102.46 297.4"/><polyline class="cls-15" points="119.52 288.56 120.59 288 166.59 215 212.59 151 212.59 92 212.59 19.6"/><line class="cls-1" x1="212.59" y1="10" x2="212.59"/></svg>
+
+	<svg id="Layer_4" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 356.54 5706.71"
+		data-9000=" left: 150px;"
+		data-9350=" left: -525px;"
+	><defs><style>.cls-1{fill:none;stroke:#f15a24;stroke-miterlimit:10;stroke-width:13px; stroke-dasharray:6600;stroke-dashoffset:-18}</style></defs><title>Untitled-2</title><path class="cls-1" 
+
+		data-0="stroke-dashoffset:6600;" 
+		data-end="stroke-dashoffset:0;"
+
+
+		d="M6304,6935l63-74v-73l-84-94-42-63-.5-73.5,63-63v-73l-20-53-36-52-7-23,7-41,19-19,13-36v-28l-9-22-14-55,10-37v-45l13-32,14-32,5-60-5-36-32-37-9-27-12-23-6-27-5-37v-32s14-19,14-32,4-32,4-32l14-27,14-41-23-41,18-46,23-64-27-68h-92l-9-91,101-60,82-22,18-37,9-50,5-73-28-41-64-78s-27-95-27-109,27-83,27-83l41-59v-50l-9-78,14-68,9-50-23-23-54-32v-91l13-37s33-45,37-59,27-64,27-64l-9-64,5-55v-50l-37-18v-28l32-54-5-46-18-46v-59l23-55,9-32v-55l5-50,9-32-50-41-41-64v-41l7-23s24-27,38-36,37-50,37-50l4-69-9-64-41-32-9-45,37-34,23-41,41-37,55-46,32-96,22-54,5-87v-50l-14-92,14-82-18-59-60-83-82-73-4-105-8-87-34-77-32-32-22-37-23-132,32-114,27-14,46-73,46-64v-151" transform="translate(-6158.62 -1232.5)"/></svg>
+</div>
+<div class="wrapper2"
+	data-9000=" left: 375px; width: 1035px;"
+	data-9350=" left: -150px;width: 1900px;"
+>
+	
+	
+
+	<div class="blackbackground"
+	data-15000="opacity:0; transform: scaleX(0); left: 0%;"
+	data-15001="opacity:1; transform: scaleX(0); left: 0%;"
+	data-15500="opacity:1; transform: scaleX(1); left: 0%;"
+	>
+	<!-- <svg class="pyramid1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 945.49 401"
+		data-16000="opacity: 0;"
+		data-17000="opacity: 1;"
+	><defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:url(#linear-gradient-2);}</style><linearGradient id="linear-gradient" x1="244.42" y1="47.52" x2="315.99" y2="453.46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f5fbb2"/><stop offset="0.19" stop-color="#f3f5b1"/><stop offset="0.43" stop-color="#efe6ad"/><stop offset="0.69" stop-color="#e8cca7"/><stop offset="0.98" stop-color="#dea79e"/><stop offset="1" stop-color="#dda49d"/></linearGradient><linearGradient id="linear-gradient-2" x1="1955.33" x2="1955.33" y2="401" gradientTransform="matrix(-1, 0, 0, 1, 2669.65, 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#498a7a"/><stop offset="0.15" stop-color="#518a7b"/><stop offset="0.39" stop-color="#698b7e"/><stop offset="0.68" stop-color="#8e8c82"/><stop offset="1" stop-color="#bf8e88"/></linearGradient></defs><title>Layer 2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-1" points="513.91 0 613.49 401 0 401 513.91 0"/><polygon class="cls-2" points="513.61 0 483.15 401 945.49 401 513.61 0"/></g></g></svg> -->
+
+	</div>
+
+	<img class="pyramid1" src="SVG/Layer_2.svg" 
+		data-15500="opacity: 0; left: -10%; top: 78%; transform: scaleX(1) scaleY(1);"
+		data-15700="opacity: 1; left: 10%; top: 78%; transform: scaleX(1) scaleY(1);"
+		data-15860="opacity: 1; left: 10%; top: 78%; transform: scaleX(1) scaleY(1);"
+		data-16200="opacity: 1; left: -10%; top: 55%; transform: scaleX(3) scaleY(3);"
+		data-16600="opacity: 1; left: -80%; top: 60%; transform: scaleX(3.3) scaleY(2.5);"
+	>
+
+
+	<img class="pyramid2" src="SVG/Layer 11.svg" 
+		data-15650="opacity: 0; left: -10%; top: 40%;"
+		data-15850="opacity: 1; left: 15%; top: 40%;"
+		data-15860="opacity: 1; left: 15%; top: 40%; transform: scaleX(1) scaleY(1);"
+		data-16200="opacity: 1; left: 20%; top: 24%; transform: scaleX(2.4) scaleY(2.4);"
+		data-16600="opacity: 1; left: 20%; top: 34%; transform: scaleX(2.9) scaleY(1.9);"
+	>
+
+	<img class="pyramid3" src="SVG/Layer 4.svg" 
+		data-15650="opacity: 0; left: -10%; top: 64%;"
+		data-15800="opacity: 1; left: 50%; top: 64%;"
+		data-15860="opacity: 1; left: 50%; top: 64%; transform: scaleX(1) scaleY(1);"
+		data-16200="opacity: 1; left: 95%; top: 41%; transform: scaleX(2.7) scaleY(2.7);"
+		data-16600="opacity: 1; left: 190%; top: 27%; transform: scaleX(3.1) scaleY(2.4);"
+
+	>
+
+	<div class="hopper2"
+	data-15800=" top: 50%; opacity: 0; transform: scale(1);"
+	data-16200=" top: 60%; opacity: 1; transform: scale(.5);"
+	data-16600="top: 65%; opacity:1; transform: scale(1.5);"
+	>
+		
+	</div>
+
+
+	<div class="minutehand"
+	data-9500="opacity:0;"
+	data-10000="opacity:1; transform: rotate(0deg);"
+	data-15000="opacity:1; transform: rotate(2300deg);"
+	></div>
+	<div class="hourhand"
+	data-9500="opacity:0;"
+	data-10000="opacity:1; transform: rotate(0deg);"
+	data-15000="opacity:1; transform: rotate(360deg);"
+	></div>
+
+	<!-- <div class="rainbow"
+	> -->
+		<div class="circle firstcolor"
+			data-9500="opacity:0; transform: rotate(0deg); border-color:hsl(59.27, 10%, 50%);"
+			data-10000="opacity:1; transform: rotate(0deg); border-color:hsl(59.27, 100%, 50%);"
+			data-15000="opacity:1; transform: rotate(1500deg); border-color:hsl(59.27, 70%, 50%);"
+		></div>
+		<div class="circle secondcolor"
+			data-9500="opacity:0;"
+			data-10000="opacity:1; transform: rotate(0deg); border-color:hsl(920, 100%, 50%);"
+			data-15000="opacity:1; transform: rotate(1000deg); border-color:hsl(520, 100%, 50%);"
+		></div>
+		<div class="circle thirdcolor"
+			data-9500="opacity:0;"
+			data-10000="opacity:1; transform: rotate(0deg); border-color:hsl(1020, 100%, 50%);"
+			data-15000="opacity:1; transform: rotate(700deg); border-color:hsl(220, 100%, 50%);"
+		></div>
+		<div class="circle fourthcolor"
+			data-9500="opacity:0;"
+			data-10000="opacity:1; transform: rotate(0deg); border-color:hsl(620, 100%, 50%);"
+			data-15000="opacity:1; transform: rotate(200deg); border-color:hsl(220, 100%, 50%);"
+		></div>
+		<div class="circle fifthcolor"
+			data-9500="opacity:0;"
+			data-10000="opacity:1; transform: rotate(0deg); border-color:hsl(420, 100%, 50%);"
+			data-15000="opacity:1; transform: rotate(2000deg); border-color:hsl(220, 100%, 50%);"
+		></div>
+<!-- 	</div> -->
+
+	<video class ="landscape" height="750px;" autoplay loop>
+    <source src="LOWPOLY_COLOR_PARTY_TERRAIN_LOOP_4K2.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+
+
+	<video class ="space" height="750px;" autoplay loop
+	data-1000="opacity:0;"
+	data-4000="opacity:1;"
+
+	>
+    <source src="Golden_Nebula_4K_Motion_Background2.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+
+	<video class ="close" height="950px;" autoplay loop
+	data-9000="opacity:0;"
+	data-9100="opacity:1;"
+
+	>
+
+    <source src="Retro_Lines_4K_Motion_Background_Loop2.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+
+
+	<div class="hopper"
+	data-0="height: 50px; width: 50px;top: 50%; opacity: 1; transform: rotate(0deg);"
+	data-9000="height: 0px; width: 0px; top: 40%; opacity: 1; transform: rotate(720deg);"
+	data-10000="height: 0px; width: 0px; top: 40%; opacity: 0;"
+	>
+		
+	</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false,
+		easing: {
+			vibrate: function(p) {
+				return Math.sin(p * 10 * Math.PI);
+			}
+		}
+	});
+$(window).scroll(function (event){
+	console.log($(window).scrollTop());
+});
+	
+
+</script>
+</body>
+</html>
