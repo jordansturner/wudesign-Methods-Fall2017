@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+<style type="text/css">
+
+	body {
+		height: 24000px;
+		width: 100%;
+		margin: 0px;
+	}
+
+	.wrapper {
+		position: fixed;
+		width: 375px;
+		height: 100%;
+		background-color: beige;
+		margin: 0px;
+		padding:0px;
+		z-index: 1;
+	}
+	#Layer_3 {
+		position: fixed;
+		height: 95%;
+		top: 20px;
+		left: 150px;
+		z-index: 51;
+		margin: 0px;
+		padding:0px;
+	}
+
+	#Layer_4 {
+		position: fixed;
+		height: 95%;
+		top: 20px;
+		left: 150px;
+		margin: 0px;
+		padding:0px;
+		z-index: 52;
+	}
+
+	.wrapper2 {
+		position: fixed;
+		top: 0px;
+		height: 100%;
+		width: 1800px;
+		background-color: black;
+		z-index: 0;
+
+	}
+	.hopper {
+	  position: absolute;
+	  width: 0px;
+	  height: 0px;
+	  z-index: 4;
+	  opacity: 1;
+	  background-color: white;
+	  border-radius: 100%;
+	  top: 93%;
+	  left: 36%;
+	  transform-origin: 50% 400%;
+
+	}
+
+	.landscape {
+		position: absolute;
+		z-index: 1;
+		margin: 0px;
+	}
+
+	.space {
+		position: absolute;
+		z-index: 2;
+		margin: 0px;
+		opacity: 0;
+	}
+	.close {
+		position: absolute;
+		z-index: 3;
+		margin: 0px;
+		opacity: 0;
+	}
+
+	.minutehand {
+		position: absolute;
+		margin: 0px;
+		left: 45%;
+		top: 60%;
+		opacity: 0;
+		height: 400px;
+		width: 20px;
+		z-index: 5;
+		background-color: white;
+		transform-origin: 50% 0%;
+		border-radius: 50%;
+	}
+
+	.hourhand {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 200px;
+		width: 20px;
+		left: 45%;
+		top: 60%;
+		z-index: 5;
+		background-color: white;
+		transform-origin: 50% 0%;
+		border-radius: 50%;
+	}
+
+
+	.firstcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 175px;
+		width: 175px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 40%;
+		top: 45%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+
+	.secondcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 125px;
+		width: 125px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 41.3%;
+		top: 48.4%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+
+
+	.thirdcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 75px;
+		width: 75px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 42.7%;
+		top: 51.8%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+		.fourthcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 225px;
+		width: 225px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 38.7%;
+		top: 41.7%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+	.fifthcolor {
+		position: absolute;
+		margin: 0px;
+		opacity: 0;
+		height: 275px;
+		width: 275px;
+		border-style: dashed;
+		border-color: red;
+		border-width: 20px;
+		left: 37.4%;
+		top: 38.3%;
+		z-index: 4;
+		border-radius: 100%;
+
+	}
+
+	.blackbackground {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+/*		background-color: black;*/
+		opacity: 0;
+		z-index: 7;
+		background-image: url(SVG/Layer_1.svg);
+		background-size: cover;
+		margin: 0px;
+		padding: 0px;
+
+	}
+
+	.pyramid1 {
+		position: fixed;
+		z-index: 9;
+		display: block;
+		opacity: 0;
+		width: 400px;
+		left: 20%;
+		top: 70%;
+
+
+	}
+
+.pyramid2 {
+		position: fixed;
+		z-index: 8;
+		display: block;
+		opacity: 0;
+		width: 1000px;
+		left: 20%;
+
+
+	}
+
+.pyramid3 {
+		position: fixed;
+		z-index: 10;
+		display: block;
+		opacity: 1;
+		width: 700px;
+		left: 30%;
+
+
+	}
+
+
+	.hopper2 {
+	  position: absolute;
+	  width: 50px;
+	  height: 50px;
+	  z-index: 10;
+	  opacity: 0;
+	  background-color: white;
+	  border-radius: 100%;
+	  top: 93%;
+	  left: 44%;
+	  transform-origin: 50% 400%;
+
+	}
+
+	.sun {
+	width: 200px;
+	  position: absolute;
+	  z-index: 7;
+	  opacity: 0;
+	  top: 60%;
+	  left: 44%;
+
+	}
+
+	.cloud {
+		position: fixed;
+		z-index: 7;
+		display: block;
+		opacity: 0;
+		width: 400px;
+		left: 20%;
+		top: 70%;
+
+
+	}
+
+	.beige {
+		position: fixed;
+		background-color: beige;
+		opacity: .3;
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		z-index: 10;
+	}
+
+
+</style>
+
+<div class="wrapper2"
+>
+	
+	
+
+	<div class="blackbackground"
+	data-15000="opacity:0; transform: scaleX(0); left: 0%;"
+	data-15001="opacity:1; transform: scaleX(0); left: 0%;"
+	data-15500="opacity:1; transform: scaleX(1); left: 0%;"
+	>
+	<!-- <svg class="pyramid1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 945.49 401"
+		data-16000="opacity: 0;"
+		data-17000="opacity: 1;"
+	><defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:url(#linear-gradient-2);}</style><linearGradient id="linear-gradient" x1="244.42" y1="47.52" x2="315.99" y2="453.46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f5fbb2"/><stop offset="0.19" stop-color="#f3f5b1"/><stop offset="0.43" stop-color="#efe6ad"/><stop offset="0.69" stop-color="#e8cca7"/><stop offset="0.98" stop-color="#dea79e"/><stop offset="1" stop-color="#dda49d"/></linearGradient><linearGradient id="linear-gradient-2" x1="1955.33" x2="1955.33" y2="401" gradientTransform="matrix(-1, 0, 0, 1, 2669.65, 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#498a7a"/><stop offset="0.15" stop-color="#518a7b"/><stop offset="0.39" stop-color="#698b7e"/><stop offset="0.68" stop-color="#8e8c82"/><stop offset="1" stop-color="#bf8e88"/></linearGradient></defs><title>Layer 2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-1" points="513.91 0 613.49 401 0 401 513.91 0"/><polygon class="cls-2" points="513.61 0 483.15 401 945.49 401 513.61 0"/></g></g></svg> -->
+
+	</div>
+
+	<img class="pyramid1" src="SVG/Layer 12.svg" 
+		data-15500="opacity: 0; left: -10%; top: 78%; transform: scaleX(1) scaleY(1);"
+		data-15700="opacity: 1; left: 10%; top: 78%; transform: scaleX(1) scaleY(1);"
+		data-15860="opacity: 1; left: 10%; top: 78%; transform: scaleX(1) scaleY(1);"
+		data-16200="opacity: 1; left: -10%; top: 55%; transform: scaleX(3) scaleY(3);"
+		data-16600="opacity: 1; left: -80%; top: 60%; transform: scaleX(3.3) scaleY(2.5);"
+	>
+
+
+	<img class="pyramid2" src="SVG/Layer_4.svg" 
+		data-15500="opacity: 0; left: -10%; top: 40%;"
+		data-15700="opacity: 1; left: 15%; top: 40%;"
+		data-15860="opacity: 1; left: 15%; top: 40%; transform: scaleX(1) scaleY(1);"
+		data-16200="opacity: 1; left: 20%; top: 24%; transform: scaleX(2.4) scaleY(2.4);"
+		data-16600="opacity: 1; left: 20%; top: 34%; transform: scaleX(2.9) scaleY(1.9);"
+		data-18000="opacity: 1; left: 27%; top: 54%; transform: scaleX(3.6) scaleY(1.5);"
+		data-19000="opacity: 1; left: 27%; top: 82.5%; transform: scaleX(3.6) scaleY(1.6);"
+		data-19500="opacity: 1; left: 38%; top: 120%; transform: scaleX(7) scaleY(1.9);"
+	>
+
+	<img class="sun" src="SVG/sun.svg" 
+		
+		data-15500="opacity: 0; left: 15%; top: 60%; transform: scaleX(.4) scaleY(.4);"
+		data-16200 = "opacity: 1; left: 10%; top: 20%; transform: scaleX(.7) scaleY(.7);"
+		data-18000="opacity: 1; left: 40%; top: 15%; transform: scaleX(.5) scaleY(.5);"
+		data-19000="opacity: 1; left: 90%; top: -30%; transform: scaleX(1) scaleY(1);"
+	>
+
+	<img class="pyramid3" src="SVG/Layer 2.svg" 
+		data-15500="opacity: 0; left: -10%; top: 64%;"
+		data-15700="opacity: 1; left: 50%; top: 64%;"
+		data-15860="opacity: 1; left: 50%; top: 64%; transform: scaleX(1) scaleY(1);"
+		data-16200="opacity: 1; left: 95%; top: 41%; transform: scaleX(2.7) scaleY(2.7);"
+		data-16600="opacity: 1; left: 190%; top: 27%; transform: scaleX(3.1) scaleY(2.4);"
+
+	>
+
+	<div class="hopper2"
+	data-15800=" top: 50%; opacity: 0; transform: scale(1); box-shadow: 0px 0px #71a68d;"
+	data-16200=" top: 60%; opacity: 1; transform: scale(.5);box-shadow: 0px 0px #71a68d;"
+	data-16600="top: 65%; opacity:1; transform: scale(1.5);box-shadow: 15px 10px #71a68d;"
+	data-18000="top: 65%; opacity:1; transform: scale(1.5);box-shadow: 25px 20px #71a68d;"
+	data-18510="top: 67%; opacity:1; transform: scale(1.5);box-shadow: -15px 30px #71a68d;"
+	data-18626="top: 67%; opacity:1; transform: scale(1.5);box-shadow: 0px 0px #71a68d;"
+	data-19000="top: 67%; opacity:1; transform: scale(1.5);box-shadow: 0px 0px #71a68d;"
+	data-19500="top: 146%; opacity:1; transform: scale(4);box-shadow: 0px 0px #71a68d;"
+	>
+		
+	</div>
+
+	<img class="cloud" src="SVG/Layer 13.svg" 
+		data-19400="opacity: 0; left: 30%; top: 85%; transform: scaleX(.5) scaleY(.5);"
+		data-21000="opacity: 1; left: -60%; top: -10%; transform: scaleX(3.3) scaleY(3.3);"
+
+	>
+
+	<div class="beige"></div>
+
+	<video class ="landscape" height="900px;" autoplay loop>
+    <source src="desert.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+
+
+	<video class ="space" height="900px;" autoplay loop
+	data-4000="opacity:0; height: 900px"
+	data-8000="opacity:.64;"
+	data-15000="opacity:.64;"
+	data-15200="opacity:1;"
+	>
+    <source src="desert2.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+
+	<div class="hopper"
+	data-0="height: 50px; width: 50px;top: 50%; opacity: 1; transform: rotate(0deg);"
+	data-9000="height: 0px; width: 0px; top: 40%; opacity: 1; transform: rotate(720deg);"
+	data-10000="height: 0px; width: 0px; top: 40%; opacity: 0;"
+	>
+		
+	</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false,
+		easing: {
+			vibrate: function(p) {
+				return Math.sin(p * 10 * Math.PI);
+			}
+		}
+	});
+$(window).scroll(function (event){
+	console.log($(window).scrollTop());
+});
+	
+
+</script>
+</body>
+</html>

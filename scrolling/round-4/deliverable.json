@@ -1,0 +1,25 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "First Test",
+      "file" : "final1.html"
+    },
+    {
+      "name" : "Second Test",
+      "file" : "final2.html"
+    },
+    {
+      "name" : "Third Test",
+      "file" : "final3.html"
+    },
+     {
+      "name" : "Fourth Test",
+      "file" : "final4.html"
+    },
+     {
+      "name" : "Fifth Test",
+      "file" : "final5.html"
+    }
+
+  ]
+}
