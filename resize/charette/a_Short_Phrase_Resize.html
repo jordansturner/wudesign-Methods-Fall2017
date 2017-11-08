@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html {
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			opacity: 1;
+		}
+
+		p {
+			position: absolute;
+			left: 37%;
+			top: 50%;
+			padding: 10px;
+
+		}
+
+
+		@media screen and (min-height: 300px) {
+			p {
+				border-style: dotted;
+				transition: border-style 1s;
+			}
+		}
+
+		@media screen and (min-height: 700px) {
+			p {
+				font-style: italic;
+				border-style: groove;
+				transition: font-style 1s border-style 1s line-height 1s;
+				width: 20px;
+				padding: 30px;
+				height: 20px;
+				transform: scale(.5);
+				line-height: 20%;
+			}
+		}
+
+
+		@media screen and (min-width: 700px) {
+			p {
+				font-weight: bold;
+				transition: font-weight 1s
+			}
+		}
+
+		@media screen and (min-width: 900px) {
+			p {
+				color: red;
+				transition: color 1s
+			}
+		}
+
+		@media screen and (min-width: 1100px) {
+			p {
+				transform: rotate(360deg);
+				transition: transform 1s;
+			}
+		}
+
+		@media screen and (min-width: 1300px) {
+			p {
+				transform: scale(5);
+				transition: transform 1s;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<p>The horse raced past the barn fell.</p>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		// $(window).on('resize', windowChange);
+
+		// setInterval(windowChange, 10);
+
+		// function windowChange(){
+		// 	console.log((window).screenY, (window).screenX);
+		// 	$('.backgroundimg').css({top:(0-window.screenY) +"px", left:(0-window.screenX) +"px"});
+		// }
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html {
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			opacity: 1;
+		}
+
+		p {
+			position: absolute;
+			top: 50%;
+			margin-left: 40px;
+			margin-right: 40px;
+			text-align: center;
+			font-size: 20px;
+
+		}
+
+
+	/*	@media screen and (min-width: 720px) {
+		    .ep_desc {
+				display: none;
+			 }
+		}
+
+		@media screen and (max-width: 719px) {
+		    .ep_desc_bigger {
+				display: none;
+			 }
+		}
+*/
+
+		@media screen and (max-width: 1200px){
+		    p {
+		    text-transform: uppercase;
+        	font-size: 60px;
+        	transition: font-size 1s;
+		    }
+		}
+
+		@media screen and (max-width: 900px){
+		    p {
+		        font-family: sans-serif;
+
+		    }
+		}
+
+		@media screen and (max-width: 700px){
+			p {
+				text-transform: uppercase;
+				color:red;
+				transition: text-transform 1s color 1s;
+			}
+		}
+
+			@media screen and (max-height: 500px){
+		    p {
+		    text-transform: uppercase;
+        	font-size: 200px;
+        	top: -2000px;
+        	transition: text-transform 1s font-size 1s top 1s;
+    		border-style: dashed;
+			transition: border-style 1s;
+		    }
+		}
+
+
+			@media screen and (max-height: 300px){
+		    p {
+		        transform: skew(40deg);
+		        text-transform: lowercase;
+		        top: -3000px;
+		        transition: transform 1s top 1s;
+
+		    }
+		}
+
+
+		@media screen and (max-height: 200px){
+		    p {
+		     text-shadow: 210px 224px 240px #B9FFE3;
+		     transform: scale(.1);
+		     transition: transform 1s;
+		    }
+		}
+
+		@media screen and (min-width: 700px) {
+			p {
+				font-weight: bold;
+				transition: font-weight 1s
+			}
+		}
+
+		@media screen and (min-width: 900px) {
+			p {
+				color: blue;
+				transition: color 1s
+			}
+		}
+
+		@media screen and (min-width: 1100px) {
+			p {
+				transform: rotate(360deg);
+				transition: transform 1s;
+			}
+		}
+
+		@media screen and (min-width: 1300px) {
+			p {
+				transform: scale(5);
+				transition: transform 1s;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<p class="ep_desc">his exceeding trifling witling, considering ranting criticizing concerning adopting fitting wording being exhibiting transcending learning, was displaying, notwithstanding ridiculing, surpassing boasting swelling reasoning, respecting correcting erring writing, and touching detecting deceiving arguing during debating.</p>
+
+	<p class="ep_desc_bigger">his exceeding trifling witling, considering ranting criticizing concerning adopting fitting wording being exhibiting transcending learning, was displaying, notwithstanding ridiculing, surpassing boasting swelling reasoning, respecting correcting erring writing, and touching detecting deceiving arguing during debating.</p>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		// $(window).on('resize', windowChange);
+
+		// setInterval(windowChange, 10);
+
+		// function windowChange(){
+		// 	console.log((window).screenY, (window).screenX);
+		// 	$('.backgroundimg').css({top:(0-window.screenY) +"px", left:(0-window.screenX) +"px"});
+		// }
+
+
+		var str = $( ".ep_desc" );
+		var result = str.substring(0, 300);
+
+		var str2 = $( ".ep_desc_bigger" );
+		var result2 = str2.substring(0, 600);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "A Paragraph",
+      "file" : "a_Paragraph_Resize.html"
+    },
+    {
+      "name" : "A Short Phrase",
+      "file" : "a_Short_Phrase_Resize.html"
+    },
+    {
+      "name" : "An Image Resize",
+      "file" : "an_Image_Resize.html"
+    },
+     {
+      "name" : "A Simple Shape Resize",
+      "file" : "simple_Shape_Resize.html"
+    }
+  ]
+}
