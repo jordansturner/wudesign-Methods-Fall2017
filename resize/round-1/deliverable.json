@@ -1,0 +1,44 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "Spin Width",
+      "file" : "spin_On_Screen_Width.html"
+    },
+    {
+      "name" : "Spin Height",
+      "file" : "spin_On_Screen_Height.html"
+    },
+    {
+      "name" : "Grab Corner To Scale On Perfect Align",
+      "file" : "scale_Once_Hit.html"
+    },
+     {
+      "name" : "Explode Once Hit (not working)",
+      "file" : "Explode_Once_Hit.html"
+    },
+    {
+      "name" : "Div Load Randomly On Screen",
+      "file" : "div_load_Randomly_On_Screen.html"
+    },
+    {
+      "name" : "Basket On Screen",
+      "file" : "basket_On_Screen.html"
+    },
+    {
+      "name" : "Ball Drop On Screen (Lots of Fun)",
+      "file" : "ball_Drop_On_Screen_Accidental_Fun.html"
+    },
+    {
+      "name" : "Ball Drop On Screen (Less Fun)",
+      "file" : "ball_Drop_On_Screen.html"
+    },
+    {
+      "name" : "Ball Drop On Screen Timed Remove",
+      "file" : "ball_Drop_On_Screen_Timer_Remove.html"
+    },
+    {
+      "name" : "Ball Drop On Screen Game Score",
+      "file" : "ball_Drop_On_Screen_Score_Board.html"
+    }
+  ]
+}

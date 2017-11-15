@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+body, html {
+    width: 1400px;
+    height: 100%;
+}
+div.box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 100%;
+}
+div.new {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 100%;
+    top: -10%;
+}
+
+.basket {
+	position: absolute;
+	top: 80%;
+	right: 1%;
+/*	transform: translate(-50%, -50%);*/
+	z-index: 1;
+	width: 200px;
+	height: 100px;
+	background-color: blue;
+}
+
+		
+	</style>
+</head>
+<body>
+	<div class="basket"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+
+
+	$(document).ready(function () {
+    makeDiv();
+
+    function makeDiv() {
+        var numRand = Math.floor(Math.random() * 501);
+        var divsize = 50;
+        var posx = (Math.random() * ($('body').width() - divsize)).toFixed();
+        // var posy = (Math.random() * ($('body').height() - divsize)).toFixed();
+        $newdiv = $("<div class='new'></div>").css({
+            'left': posx + 'px',
+                // 'top': posy + 'px'
+        });
+        $newdiv.animate({ 
+        "top": "80%",
+        }, 2000 );
+
+        $newdiv.appendTo('body').delay(3000).fadeIn(200, function () {
+            //$(this).remove();
+            makeDiv();
+        });
+        
+
+    }
+
+
+function getPositions(box) {
+  var $box = $(box);
+  var pos = $box.position();
+  var width = $box.width();
+  var height = $box.height();
+  return [ [ pos.left, pos.left + width ], [ pos.top, pos.top + height ] ];
+}
+        
+function comparePositions(p1, p2) {
+  var x1 = p1[0] < p2[0] ? p1 : p2;
+  var x2 = p1[0] < p2[0] ? p2 : p1;
+  return x1[1] > x2[0] || x1[0] === x2[0] ? true : false;
+}
+
+function checkCollisions(){
+  var box = $(".basket")[0];
+  var pos = getPositions(box);
+
+  var pos2 = getPositions(this);
+  var horizontalMatch = comparePositions(pos[0], pos2[0]);
+  var verticalMatch = comparePositions(pos[1], pos2[1]);            
+  var match = horizontalMatch && verticalMatch;
+  if (match) { $(document).append("<p>COLLISION !!!</p>"); }
+}
+
+});
+
+// 	function trimWords(){//change number of words depending on width in the category blog page
+//     var theString = $(".trimmed-words").html(); //the string
+//     var contentWidth = $(document).width(); //get width of browser
+//     if(contentWidth < 600){
+//         var maxLength = 80 // maximum number of characters to extract
+//     }
+//     else if (contentWidth >= 600 && contentWidth < 1025){
+//         var maxLength = 100 		
+//     }
+//     else if (contentWidth >= 1025 && contentWidth < 1279){
+//         var maxLength = 200 		
+//     }
+//     else if (contentWidth >= 1279){
+//         var maxLength = 340 		
+//     }
+//     //trim the string to the maximum length
+//     var trimmedString = trimmedStringOriginal.substr(0, maxLength);
+
+//     //re-trim if we are in the middle of a word
+//     trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")));
+//     $(".trimmed-words").html(trimmedString);
+// }
+// var trimmedStringOriginal = $(".trimmed-words").html();
+// trimWords();
+// $(window).resize(trimWords)
+
+	</script>
+</body>
+</html>
