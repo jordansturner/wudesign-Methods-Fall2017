@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <!-- 	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css"> -->
+    <style type="text/css">
+    
+    html {
+        height: 100%;
+    }
+    body {
+
+       height: 100%;
+/*       width: 1250px;*/
+       margin: 0px;
+       margin-left: 250px;
+
+
+   }
+
+   .gameArea {
+       position: relative;
+       height:100%;
+       width: 1250px;
+   }
+
+   div.box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+/*    background-color: orange;
+    border-radius: 100%;*/
+background: url(acorn.png);
+background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+div.new {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+/*    background-color: red;
+    border-radius: 100%;*/
+    top: -20%;
+    background: url(acorn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.basket {
+	position: fixed;
+	top: 70%;
+	right: 1%;
+    /*	transform: translate(-50%, -50%);*/
+    z-index: 2;
+    width: 200px;
+    /*	height: 200px;*/
+    /*	background-color: blue;*/
+    /*	background-image: url(basketball_Net.jpg);*/
+}
+
+.backgroundimg {
+  position: absolute;
+  height: 170%;
+  z-index: 0;
+  top: -510px;
+  left: -110px;
+}
+
+#current-score-value {
+  color: white;
+}
+
+.title-big {
+  color: white;
+}
+
+
+</style>
+
+</head>
+<body>
+
+  <img src="art_files/red_landscape.jpg" class="backgroundimg"></img>
+	<section class="gameArea">
+		<h1 class="title-big">High Score: <span id="current-score-value">0</span></h1>
+
+		<img src="art_files/squirrel.png" class="basket"></img>
+
+	</section>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- 	<script src="jquery-ui.min.js"></script> -->
+    <script type="text/javascript">
+
+
+
+
+       $(document).ready(function () {
+        makeDiv();
+
+        var currentScore = 0;
+        var hoopX=0;
+
+
+        function makeDiv() {
+
+            var numRand = Math.floor(Math.random() * 501);
+            var divsize = 50;
+            var posx = (Math.random() * ($('.gameArea').width() - divsize)).toFixed();
+            $newdiv = $("<div class='new'></div>").css({
+                'left': posx + 'px',
+
+            });
+            
+
+            $newdiv.appendTo('.gameArea').delay(3000).fadeIn(200, function () {
+            //$(this).remove();
+            makeDiv();
+        });
+
+            $newdiv.animate({ 
+                "top": "110%",
+            }, 2000, 
+            function(){
+               checkScore(posx);
+               $(this).remove();
+           } 
+           );
+
+
+        }
+
+    function checkScore(ballX){ //ballX is x coordinate of ball
+        hoopX = $('body').width()
+        var range = hoopX - ballX
+
+        if (range <= 220 && range >= 50) {
+            currentScore++;
+            $('#current-score-value').text(currentScore);
+        }
+        
+    }
+
+
+    // console.log("gamearea width: " + $('.gameArea').width(), "body width: " + $('body').width(), "ball position: " + posx);
+    
+});
+</script>
+</body>
+</html>

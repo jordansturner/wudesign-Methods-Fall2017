@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title></title>
+    <!-- 	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css"> -->
+    <style type="text/css">
+    
+    html {
+        height: 100%;
+    }
+    body {
+
+       height: 100%;
+/*       width: 1250px;*/
+       margin: 0px;
+       margin-left: 250px;
+
+
+   }
+
+   .gameArea {
+       position: relative;
+       height:100%;
+       width: 1250px;
+   }
+
+.basket {
+	position: absolute;
+	top: 80%;
+	right:38%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 270px;
+    /*	height: 200px;*/
+    /*	background-color: blue;*/
+    /*	background-image: url(basketball_Net.jpg);*/
+}
+
+.backgroundimg {
+  position: absolute;
+  height: 130%;
+  z-index: 0;
+  top: -170px;
+  left: -110px;
+}
+
+
+.win {
+  position: absolute;
+  left: 15%;
+  top: 20%;
+  color: white;
+  font-size: 30px;
+  width: 650px;
+  text-align: center;
+  z-index: 4;
+}
+
+.restart {
+  position: absolute;
+  left: 51%;
+  top: 40%;
+  color: white;
+  font-size: 33px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  border-radius: 70px;
+  width: 200px;
+  height: 42px;
+  background-color: #bc6c37;
+  text-decoration: none;
+  z-index: 4;
+
+}
+
+@media screen and (min-width: 300px) {
+      .win {
+        left: -14%;
+        width: 250px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 68%;
+        transition: top 1s;
+      }
+    }
+
+@media screen and (min-width: 500px) {
+  .win {
+    left: -5%;
+    width: 250px;
+    transition: width 1s, left 1s;
+  }
+  .restart {
+        top: 65%;
+        transition: top 1s;
+      }
+
+}
+
+
+@media screen and (min-width: 700px) {
+      .win {
+        left: 0%;
+        width: 250px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 65%;
+        transition: top 1s;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      .win {
+        left: 5%;
+        width: 350px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 57%;
+        transition: top 1s;
+      }
+    }
+
+    @media screen and (min-width: 1100px) {
+      .win {
+        left: 10%;
+        width: 450px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 52%;
+        transition: top 1s;
+      }
+    }
+
+    @media screen and (min-width: 1300px) {
+      .win {
+        left: 15%;
+        width: 650px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 42%;
+        transition: top 1s;
+      }
+    }
+
+</style>
+
+</head>
+
+<body>
+
+  <img src="art_files/backgroundnight.png" class="backgroundimg"></img>
+   <a href='#' class='restart'><span>Start</span></a>
+	<section class="gameArea">
+
+		<img src="art_files/squirrel.png" class="basket"></img>
+    <div class='win'> Help Bob The Squirrel store nuts for winter! Grab the right side of the browser window to move Bob. Acorns will drop from the trees. Goodluck!</div>
+   
+
+	</section>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- 	<script src="jquery-ui.min.js"></script> -->
+    <script type="text/javascript">
+
+      $( ".restart" ).on( "click", function() {
+         window.location.href = "Ball_Drop_Game_Design10.html"
+      });
+       
+</script>
+</body>
+</html>
