@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title></title>
+    <!-- 	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Sniglet" rel="stylesheet">
+    <style type="text/css">
+    
+    html {
+        height: 100%;
+    }
+    body {
+
+       height: 100%;
+/*       width: 1250px;*/
+       margin: 0px;
+       margin-left: 250px;
+       overflow: hidden;
+
+
+   }
+
+   .gameArea {
+       position: relative;
+       height:100%;
+       width: 1250px;
+   }
+
+.basket {
+	position: absolute;
+	top: 80%;
+	right:43%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 220px;
+    /*	height: 200px;*/
+    /*	background-color: blue;*/
+    /*	background-image: url(basketball_Net.jpg);*/
+}
+
+.backgroundimg {
+  position: absolute;
+  height: 130%;
+  z-index: 0;
+  top: -170px;
+  left: -110px;
+}
+
+
+.win {
+  position: absolute;
+  left: 15%;
+  top: 20%;
+  color: white;
+  font-size: 28px;
+  width: 650px;
+  text-align: center;
+  z-index: 4;
+  font-family: 'Sniglet', cursive;
+  letter-spacing: 2px;
+}
+
+.restart {
+  position: absolute;
+  left: 51%;
+  top: 48%;
+  padding-top: 8px;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  border-radius: 70px;
+  width: 200px;
+  height: 42px;
+  background-color: #bc6c37;
+  text-decoration: none;
+  z-index: 4;
+  font-family: 'Sniglet', cursive;
+
+}
+
+@media screen and (min-width: 300px) {
+      .win {
+        left: -14%;
+        width: 250px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 72%;
+        transition: top 1s;
+      }
+    }
+
+@media screen and (min-width: 500px) {
+  .win {
+    left: -5%;
+    width: 250px;
+    transition: width 1s, left 1s;
+  }
+  .restart {
+        top: 72%;
+        transition: top 1s;
+      }
+
+}
+
+
+@media screen and (min-width: 700px) {
+      .win {
+        left: 0%;
+        width: 250px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 72%;
+        transition: top 1s;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      .win {
+        left: 5%;
+        width: 350px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 62%;
+        transition: top 1s;
+      }
+    }
+
+    @media screen and (min-width: 1100px) {
+      .win {
+        left: 10%;
+        width: 450px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 58%;
+        transition: top 1s;
+      }
+    }
+
+    @media screen and (min-width: 1300px) {
+      .win {
+        left: 12%;
+        width: 650px;
+        transition: width 1s, left 1s;
+      }
+      .restart {
+        top: 48%;
+        transition: top 1s;
+      }
+    }
+
+</style>
+
+</head>
+
+<body>
+  <audio id="forest_Night" src="art_files/forest_Night.mp3" autoplay="autoplay" loop="loop"></audio>
+  <audio id="night_Ambient" src="art_files/night_Ambient.mp3" autoplay="autoplay" loop="loop"></audio>
+  <img src="art_files/backgroundnight.png" class="backgroundimg"></img>
+   <a href='#' class='restart'><span>Start</span></a>
+	<section class="gameArea">
+
+		<img src="art_files/squirrel.png" class="basket"></img>
+    <div class='win'> Help "Bob The Squirrel" store nuts for winter! Resize the width of the browser to collect the falling nuts. Acorns will drop from the trees. Good luck!</div>
+   
+
+	</section>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- 	<script src="jquery-ui.min.js"></script> -->
+    <script type="text/javascript">
+
+      var sound = document.getElementById("night_Ambient");
+      sound.volume = 0.1;
+
+      $( ".restart" ).on( "click", function() {
+         window.location.href = "Ball_Drop_Game_Design9.html"
+      });
+       
+</script>
+</body>
+</html>
